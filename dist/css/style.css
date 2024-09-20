@@ -292,8 +292,8 @@ body {
   border-radius: 24px;
   padding: 32px;
   background-color: #fff;
-  -webkit-mask: url(../img/elements/corner-top-right.webp);
-  mask: url(../img/elements/corner-top-right.webp);
+  -webkit-mask: url(../img/elements/corner-top-right.png);
+  mask: url(../img/elements/corner-top-right.png);
   -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%
 }
@@ -1415,12 +1415,12 @@ body {
   height: 230px;
   bottom: 0;
   right: 0;
-  background: url(../img/picture/teeth.webp) right 0 bottom 0/contain no-repeat;
+  background: url(../img/picture/teeth.png) right 0 bottom 0/contain no-repeat;
   z-index: -1
 }
 .services__item--main {
   border-radius: 30px;
-  background: url(../img/decor/service-gradiend.webp) bottom 0 right 0/100% auto no-repeat;
+  background: url(../img/decor/service-gradiend.png) bottom 0 right 0/100% auto no-repeat;
   background-color: var(--peach);
   align-items: start
 }
@@ -1546,7 +1546,7 @@ body {
   border-radius: 20px;
   max-width: 235px;
   width: 100%;
-  background: url(../img/picture/teeth-orange.webp) top -6px right 44px/80px 75px no-repeat;
+  background: url(../img/picture/teeth-orange.png) top -6px right 44px/80px 75px no-repeat;
   background-color: var(--orange);
   z-index: 1
 }
@@ -1613,7 +1613,7 @@ body {
   content: "";
   width: 100%;
   height: 1900px;
-  background: url(../img/decor/doctors-decor.webp) 0 0/cover no-repeat;
+  background: url(../img/decor/doctors-decor.png) 0 0/cover no-repeat;
   top: -570px;
   left: 0;
   z-index: -1
@@ -1977,7 +1977,7 @@ body {
   height: 1140px;
   top: 0;
   right: 0;
-  background: url(../img/decor/rating-decor.webp) 0 0/cover no-repeat;
+  background: url(../img/decor/rating-decor.png) 0 0/cover no-repeat;
   z-index: -1
 }
 .rating__title {
@@ -2036,7 +2036,7 @@ body {
   position: relative;
   border-radius: 30px;
   padding: 40px;
-  background: url(../img/picture/teeth-2.webp) bottom -50px left -85px/455px 415px no-repeat;
+  background: url(../img/picture/teeth-2.png) bottom -50px left -85px/455px 415px no-repeat;
   background-color: #fff
 }
 .reviews__head {
@@ -2267,7 +2267,7 @@ body {
 .footer::before {
   position: absolute;
   content: "";
-  background: url(../img/decor/footer-decor.webp) 0 0/contain no-repeat;
+  background: url(../img/decor/footer-decor.png) 0 0/contain no-repeat;
   inset: 0;
   z-index: -1
 }
@@ -3130,8 +3130,8 @@ body {
     line-height: 133%
   }
   .wrapper-form {
-    -webkit-mask: url(../img/elements/corner-top-right-mobile.webp);
-    mask: url(../img/elements/corner-top-right-mobile.webp);
+    -webkit-mask: url(../img/elements/corner-top-right-mobile.png);
+    mask: url(../img/elements/corner-top-right-mobile.png);
     -webkit-mask-size: cover;
     mask-size: cover;
     padding: 16px 10px
