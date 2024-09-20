@@ -1,0 +1,198 @@
+.services {
+  padding-bottom: 24px;
+  background-color: white;
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 23px;
+    @include tablet {
+      gap: 20px;
+    }
+    @include mobile {
+      gap: 16px;
+    }
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    align-items: end;
+    border-radius: 30px 0px 30px 30px;
+    background-color: var(--alabaster);
+    flex: 0 1 calc(((100% - 444px) / 3) - 23px );
+    &._big {
+      flex-basis: 444px;
+      z-index: 1;
+      &::after {
+        position: absolute;
+        content: "";
+        width: 220px;
+        height: 230px;
+        bottom: 0;
+        right: 0;
+        background: url('@img/picture/teeth.png') right 0 bottom 0 / contain no-repeat;
+        z-index: -1;
+      }
+    }
+    @include desktop-min {
+      flex-basis: calc(((100% - 405px) / 2) - 23px );
+      &._big {
+        flex-basis: 405px;
+      }
+    }
+    @include laptop-min {
+      flex-basis: calc(33% - 13px) !important;
+    }
+    @include tablet {
+      flex-basis: calc(50% - 10px) !important;
+    }
+    @include mobile {
+      flex-basis: 100% !important;
+      border-radius: 16px;
+      &._big {
+        &::after {
+          display: none;
+        }
+      }
+    }
+    &--main {
+      border-radius: 30px;
+      background: url('@img/decor/service-gradiend.png') bottom 0 right 0 / 100% auto no-repeat;
+      background-color: var(--peach);
+      align-items: start;
+      .services__item-info {
+        z-index: 1;
+      }
+      @include mobile {
+        background-size: 100% 100%;
+        .services__item-info {
+          align-items: start;
+          flex-direction: column;
+          width: 100%;
+        }
+        .services__title {
+          max-width: 190px;
+        }
+        .btn {
+          width: 100%;
+        }
+      }
+    }
+  }
+  &__item-info {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 30px;
+    height: 100%;
+    @include laptop-min {
+      padding: 15px;
+    }
+    @include tablet {
+      gap: 20px;
+    }
+    @include mobile {
+      padding: 20px;
+      flex-direction: row;
+      align-items: center;
+      gap: 16px;
+    }
+  }
+  &__icon {
+    display: block;
+    width: 80px;
+    height: 80px;
+    @include tablet {
+      width: 60px;
+      height: 60px;
+    }
+    @include mobile {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  &__title {
+    margin-bottom: 15px;
+    @include mobile {
+      margin-bottom: 0;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    @include mobile {
+      display: none;
+    }
+  }
+  &__list-btn {
+    font-size: 14px;
+    line-height: 143%;
+    transition: color 0.2s ease;
+    @include hover {
+      color: var(--portage);
+    }
+  }
+  &__item-img {
+    width: 180px;
+    margin-left: auto;
+    @include laptop-min {
+      display: none;
+    }
+  }
+  &__item-corner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    .corner__body {
+      padding: 0px 0px 14px 14px;
+    }
+    @include tablet {
+      .corner__body {
+        padding: 0px 0px 8px 8px;
+      }
+    }
+  }
+  &__item-circle {
+    @include flex-center;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var();
+    color: var(--melrose);
+    border: 1px solid var(--melrose);
+    transition: background-color .2s ease;
+    @include hover {
+      color: white;
+      background-color: var(--melrose);
+    }
+    @include tablet {
+      width: 32px;
+      height: 32px;
+    }
+  }
+  &__item-arrow {
+    width: 16px;
+    height: 16px;
+    color: inherit;
+    @include tablet {
+      width: 14px;
+      height: 14px;
+    }
+  }
+  &__item-arm {
+    position: absolute;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    @include mobile {
+      width: 225px;
+      height: 100%;
+      object-fit: contain;
+      object-position: right;
+    }
+  }
+}

@@ -1,0 +1,144 @@
+.reviews {
+  padding-bottom: 90px;
+  @include tablet {
+    padding-bottom: 40px;
+  }
+  &__body {
+    position: relative;
+    border-radius: 30px;
+    padding: 40px;
+    background: url("@img/picture/teeth-2.png") bottom -50px left -85px / 455px 415px no-repeat;
+    background-color: white;
+    @include tablet {
+      padding: 20px;
+      background-size: 180px 160px;
+      background-position: right 8px top -17px;
+      border-radius: 20px;
+    }
+  }
+  &__head {
+    position: absolute;
+    top: 0;
+    left: 0;
+    .corner__body {
+      padding: 0px 100px 30px 0px;
+    }
+    @include laptop {
+      .corner__body {
+        padding-right: 30px;
+      }
+    }
+    @include tablet {
+      .corner__body {
+        padding: 0px 24px 10px 0px;
+      }
+    }
+  }
+  &__title {
+    max-width: 280px;
+    @include laptop-min {
+      max-width: 200px;
+    }
+    @include tablet {
+      max-width: 175px;
+    }
+  }
+  &__nav {
+    @include flex-between;
+    margin-left: auto;
+    max-width: 955px;
+    @include desktop {
+      max-width: 815px;
+    }
+    @include desktop-min {
+      max-width: none;
+      justify-content: end;
+      gap: 30px;
+    }
+    @include tablet {
+      display: none;
+    }
+  }
+  &__pagination {
+    max-width: 260px;
+  }
+  &__slider {
+    max-width: 1300px;
+    width: 100%;
+    margin-top: 50px;
+    @include tablet {
+      margin-top: 0;
+    }
+  }
+  &__slide {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    @include tablet {
+      padding-top: 75px;
+    }
+  }
+  &__img {
+    width: 268px;
+    height: 268px;
+    border-radius: 50%;
+    @include tablet {
+      position: absolute;
+      width: 122px;
+      height: 122px;
+      top: 4px;
+      right: 0;
+    }
+  }
+  &__info {
+    flex: 0 1 920px;
+  }
+  &__info-head {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    @include tablet {
+      gap: 16px;
+    }
+  }
+  &__profile {
+  }
+  &__date {
+    display: block;
+    font-size: 14px;
+    line-height: 143%;
+    margin-bottom: 10px;
+    color: var(--manatee);
+    @include tablet {
+      margin-bottom: 4px;
+    }
+  }
+  &__content {
+    margin: 0;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--comet);
+    max-width: 620px;
+    @include text-overflow(9);
+    @include tablet {
+      font-size: 14px;
+      line-height: 143%;
+    }
+  }
+  &__info-footer {
+    @include flex-between;
+    margin-top: 32px;
+    @include tablet {
+      margin-top: 20px;
+    }
+  }
+  &__scrollbar-wrapper {
+    margin-top: 24px;
+    display: none;
+    @include tablet {
+      display: block;
+    }
+  }
+}

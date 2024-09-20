@@ -1,0 +1,215 @@
+.header {
+  position: relative;
+  padding: 15px 0px;
+  background-color: white;
+  &__body {
+    @include flex-between;
+    position: relative;
+    padding: 13px 15px;
+    border: 1px solid var(--athens-gray);
+    border-radius: 20px;
+    @include laptop-min {
+      flex-direction: row-reverse;
+    }
+  }
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    @include laptop {
+      gap: 20px;
+    }
+  }
+  &__burger-btn {
+    @include flex-center;
+    position: relative;
+    flex-direction: column;
+    gap: 4px;
+    background-color: var(--melrose);
+    border-radius: 50px;
+    width: 65px;
+    height: 40px;
+    border: 1px solid var(--melrose);
+    color: white;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+    &.active {
+      span {
+        position: absolute;
+        &:first-child {
+          transform: rotate(45deg);
+        }
+        &:last-child {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+    @include hover {
+      background-color: transparent;
+      color: var(--melrose);
+    }
+    span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      border-radius: 5px;
+      background-color: currentColor;
+      transition: transform 0.2s ease;
+    }
+  }
+  &__social {
+    position: absolute;
+    transform: translateY(20px);
+    opacity: 0;
+    visibility: hidden;
+    left: 0;
+    transition:
+      transform 0.4s ease,
+      opacity 0.4s ease,
+      visibility 0.4s ease;
+    &.open {
+      position: static;
+      transform: translateY(0px);
+      visibility: visible;
+      opacity: 1;
+    }
+    .social__btn {
+      background-size: 17px 21px;
+      gap: 11px;
+      background-position: center left 37px;
+    }
+    .social__wrapper-icon {
+      width: 40px;
+      height: 40px;
+    }
+    @include laptop-min {
+      display: none;
+    }
+  }
+  &__nav {
+    position: static;
+    transition:
+      transform 0.4s ease,
+      opacity 0.4s ease,
+      visibility 0.4s ease;
+    &.show {
+      position: absolute;
+      transform: translateY(20px);
+      opacity: 0;
+      visibility: hidden;
+    }
+    @include laptop-min {
+      display: none;
+    }
+  }
+  &__list {
+    display: flex;
+    gap: 24px;
+    @include laptop {
+      gap: 15px;
+    }
+    a {
+      position: relative;
+      font-size: 16px;
+      line-height: 150%;
+      color: var(--gun-powder);
+      &::before {
+        position: absolute;
+        content: "";
+        right: 50%;
+        left: 50%;
+        bottom: 0;
+        height: 1px;
+        background-color: currentColor;
+        transition:
+          right 0.2s ease,
+          left 0.2s ease;
+      }
+      @include hover {
+        &::before {
+          right: 0;
+          left: 0;
+        }
+      }
+      @include laptop {
+        font-size: 14px;
+      }
+    }
+  }
+  &__logo {
+    display: block;
+    width: 240px;
+    @include laptop {
+      width: 200px;
+    }
+    @include tablet {
+      width: 160px;
+    }
+  }
+  &__logo-img {
+    display: block;
+    width: 100%;
+  }
+  &__contacts {
+    display: flex;
+    gap: 40px;
+    @include laptop {
+      gap: 20px;
+    }
+    @include laptop-min {
+      display: none;
+    }
+  }
+  &__contacts-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    a {
+      position: relative;
+      display: block;
+      &::before {
+        position: absolute;
+        content: "";
+        right: 50%;
+        left: 50%;
+        bottom: 0;
+        height: 1px;
+        background-color: currentColor;
+        transition:
+          right 0.2s ease,
+          left 0.2s ease;
+      }
+      @include hover {
+        &::before {
+          right: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+  &__contacts-circle {
+    @include flex-center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--orange-light);
+  }
+  &__contacts-icon {
+    width: 18px;
+    height: 18px;
+    color: var(--orange);
+  }
+  &__contacts-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--gun-powder);
+    margin-bottom: 2px;
+  }
+  &__contacts-content {
+    font-size: 14px;
+    line-height: 143%;
+    color: var(--comet);
+  }
+}

@@ -1,0 +1,296 @@
+.burger {
+  position: absolute;
+  align-self: start;
+  align-items: start;
+  margin-top: 100px;
+  display: flex;
+  gap: 20px;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transform: translateY(-40px);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease,
+    visibility 0.4s ease;
+  &.open {
+    transform: translateY(0px);
+    opacity: 1;
+    visibility: visible;
+    z-index: 100;
+  }
+  @include laptop {
+    gap: 0;
+    max-width: 400px;
+    width: 100%;
+  }
+  @include laptop-min {
+    margin-top: 80px;
+  }
+  &__wrapper {
+    overflow: hidden;
+    border-radius: 32px;
+    padding: 40px 32px 40px 40px;
+    background-color: white;
+    &--main {
+      flex: 1;
+      @include laptop {
+        flex: none;
+      }
+    }
+    &--nav {
+      display: none;
+      max-width: 400px;
+      width: 100%;
+      @include laptop {
+        display: block;
+      }
+    }
+    @include laptop {
+      padding: 0;
+      border-radius: 16px;
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(-45px);
+      max-width: 0px;
+      width: 100%;
+      max-height: 650px;
+      overflow-y: auto;
+      transition:
+        visibility 0.4s ease,
+        transform 0.4s ease,
+        opacity 0.4s ease;
+      &.open {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0);
+        max-width: 400px;
+        padding: 25px;
+      }
+    }
+    @include laptop-min {
+      &.open {
+        padding: 16px 20px;
+      }
+    }
+  }
+  &__title {
+    font-size: 32px;
+    line-height: 144%;
+    margin-bottom: 32px;
+    @include laptop {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    @include laptop {
+      display: none;
+    }
+  }
+  &__menu-btn {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    padding: 10px 20px 18px 0px;
+    color: var(--gun-powder);
+    font-size: 18px;
+    line-height: 133%;
+    border-bottom: 1px solid var(--whisper);
+    &::before {
+      position: absolute;
+      content: "";
+      width: 1px;
+      height: 40px;
+      right: 52px;
+      top: 0;
+      background-color: var(--whisper);
+    }
+    @include laptop {
+      display: flex;
+    }
+  }
+  &__menu-arrow {
+    width: 7px;
+    height: 14px;
+    color: var(--orange);
+  }
+  &__sidebar-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @include laptop {
+      gap: 15px;
+    }
+    @include laptop {
+      gap: 0;
+    }
+    li {
+      @include laptop {
+        &:not(:last-child) {
+          a {
+            border-bottom: 1px solid var(--whisper);
+          }
+        }
+      }
+    }
+    a {
+      display: block;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 130%;
+      color: var(--gun-powder);
+      transition: color 0.2s ease;
+      @include hover {
+        color: var(--portage);
+      }
+      @include laptop {
+        font-size: 18px;
+        padding: 10px 0px 18px 0px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 133%;
+      }
+    }
+  }
+  &__nav-menu {
+    margin-top: 10px;
+  }
+  &__menu-body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    row-gap: 40px;
+    @include laptop {
+      gap: 20px;
+    }
+  }
+  &__menu-item-btn {
+    display: none;
+    align-items: center;
+    font-size: 18px;
+    line-height: 133%;
+    color: var(--orange);
+    padding: 8px 0px;
+    width: 100%;
+    gap: 8px;
+    border-bottom: 1px solid var(--whisper);
+    @include laptop {
+      display: flex;
+    }
+  }
+  &__menu-item {
+    flex: 0 1 calc(33% - 18px);
+    @include laptop {
+      flex-basis: calc(33% - 12px);
+    }
+    @include laptop {
+      display: none;
+      flex: none;
+      width: 100%;
+      &:first-child {
+        display: block;
+      }
+    }
+  }
+  &__menu-title {
+    font-size: 24px;
+    line-height: 125%;
+    color: var(--melrose);
+    margin-bottom: 16px;
+    @include laptop {
+      display: none;
+    }
+  }
+  &__menu-item-arrow {
+    display: none;
+    width: 24px;
+    height: 24px;
+    @include laptop {
+      display: block;
+    }
+  }
+  &__menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    @include laptop-min {
+      gap: 0px;
+    }
+    li {
+      font-size: 16px;
+      line-height: 150%;
+      transition: color 0.2s ease;
+      @include hover {
+        color: var(--portage);
+      }
+      @include desktop-min {
+        font-size: 14px;
+      }
+      @include laptop {
+        font-size: 18px;
+        line-height: 133%;
+        &:not(:last-child) {
+          a {
+            border-bottom: 1px solid var(--whisper);
+          }
+        }
+      }
+    }
+    a {
+      display: block;
+      @include laptop {
+        padding: 10px 0px 18px 0px;
+      }
+    }
+  }
+  &__contacts {
+    display: none;
+    margin-top: 24px;
+    @include laptop-min {
+      display: block;
+    }
+  }
+  &__location {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  &__location-icon {
+    width: 20px;
+    height: 20px;
+    color: var(--orange);
+  }
+  &__location-content {
+    display: block;
+    font-size: 16px;
+    line-height: 150%;
+    margin-bottom: 4px;
+    color: var(--gun-powder);
+  }
+  &__location-time {
+    font-size: 14px;
+    line-height: 143%;
+  }
+  &__social {
+    display: flex;
+    gap: 16px;
+    a {
+      @include flex-center;
+      width: 48px;
+      height: 48px;
+      background-color: var(--alabaster);
+      border-radius: 50%;
+      transition: transform 0.2s ease;
+      @include hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  &__social-icon {
+    width: 24px;
+    height: 24px;
+  }
+}

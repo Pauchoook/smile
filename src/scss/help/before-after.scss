@@ -1,0 +1,75 @@
+.before-after {
+  position: relative;
+  &__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    object-position: left;
+    &:first-child {
+      z-index: 1;
+      width: 100%;
+    }
+    &:nth-child(2) {
+      z-index: 2;
+    }
+  }
+  &__range {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+  }
+  &___range-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  &__handle {
+    position: absolute;
+    height: 100%;
+    transform: translateX(-25px);
+    z-index: -1;
+  }
+  &__handle-wrapper {
+    @include flex-center;
+    position: relative;
+    height: 100%;
+    z-index: 1;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background-color: white;
+      z-index: -1;
+    }
+  }
+  &__handle-circle {
+    position: relative;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    &::before {
+      position: absolute;
+      content: "";
+      border-radius: 50%;
+      inset: 4px;
+      opacity: 0.4;
+      background: url('@img/arrows-nav.svg') center / 30px 30px no-repeat;
+      background-color: var(--melrose);
+    }
+  }
+  &__input {
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+}

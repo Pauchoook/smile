@@ -1,0 +1,67 @@
+.select {
+  position: relative;
+  &.open {
+    .select__arrow {
+      transform: rotate(180deg);
+    }
+    .input {
+      border-radius: 20px 20px 0px 0px;
+    }
+    .select__list {
+      transform: translateY(0px);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &__btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  &__arrow {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: 20px;
+    color: var(--hint);
+    transition: transform 0.2s ease;
+  }
+  &__list {
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    box-shadow: 0 8px 16px 0 rgba(62, 19, 77, 0.07);
+    background-color: var(--alabaster);
+    border-radius: 0px 0px 20px 20px;
+    border: 1px solid var(--athens-gray);
+    border-top: none;
+    z-index: 10;
+    transform: translateY(20px);
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 0.4s ease,
+      visibility 0.4s ease,
+      transform 0.4s ease;
+  }
+  &__item {
+    cursor: pointer;
+    width: 100%;
+    padding: 8px 16px;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--gun-powder);
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease;
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--athens-gray);
+    }
+    @include hover {
+      color: white;
+      background-color: var(--melrose);
+    }
+  }
+}

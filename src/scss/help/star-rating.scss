@@ -1,0 +1,46 @@
+.star-rating {
+  display: flex;
+  width: fit-content;
+  flex-direction: row-reverse;
+  gap: 2px;
+  @include tablet {
+    gap: 1px;
+  }
+  &[data-value="1"] {
+    .star-rating__icon:nth-child(n + 5) {
+      color: var(--orange);
+    }
+  }
+  &[data-value="2"] {
+    .star-rating__icon:nth-child(n + 4) {
+      color: var(--orange);
+    }
+  }
+  &[data-value="3"] {
+    .star-rating__icon:nth-child(n + 3) {
+      color: var(--orange);
+    }
+  }
+  &[data-value="4"] {
+    .star-rating__icon:nth-child(n + 2) {
+      color: var(--orange);
+    }
+  }
+  &[data-value="5"] {
+    .star-rating__icon:nth-child(n + 1) {
+      color: var(--orange);
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    stroke-width: 1px;
+    color: transparent;
+    stroke: var(--orange);
+    @include tablet {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}

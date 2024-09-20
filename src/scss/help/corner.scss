@@ -1,0 +1,178 @@
+.corner {
+  &__body {
+    position: relative;
+    background-color: white;
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: 40px;
+      height: 40px;
+      background: url("@img/elements/corner.svg") 0 0 / 100% 100% no-repeat;
+    }
+    &--gray {
+      background-color: var(--alabaster);
+      &::before,
+      &::after {
+        background: url("@img/elements/corner-alabaster.svg") 0 0 / 100% 100% no-repeat;
+      }
+    }
+    @include tablet {
+      &::before,
+      &::after {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    &--mini {
+      &::before,
+      &::after {
+        width: 26px;
+        height: 26px;
+      }
+      @include tablet {
+        &::before,
+        &::after {
+          width: 14px;
+          height: 14px;
+        }
+      }
+    }
+  }
+  &--right-bottom {
+    .corner__body {
+      border-radius: 0 0 40px 0;
+      @include tablet {
+        border-radius: 0 0 20px 0;
+      }
+      &::before {
+        left: 0;
+        bottom: -40px;
+      }
+      &::after {
+        top: 0;
+        right: -40px;
+      }
+      @include tablet {
+        &::before {
+          bottom: -20px;
+        }
+        &::after {
+          right: -20px;
+        }
+      }
+    }
+  }
+  &--left-bottom {
+    .corner__body {
+      border-radius: 0 0 0 40px;
+      @include tablet {
+        border-radius: 0 0 0 20px;
+      }
+      &::before {
+        top: 0;
+        left: -40px;
+        transform: rotate(90deg);
+      }
+      &::after {
+        right: 0;
+        bottom: -40px;
+        transform: rotate(90deg);
+      }
+      @include tablet {
+        &::before {
+          left: -20px;
+        }
+        &::after {
+          bottom: -20px;
+        }
+      }
+      &--mini {
+        border-radius: 0 0 0 30px;
+        &::before {
+          left: -26px;
+        }
+        &::after {
+          bottom: -26px;
+        }
+        @include tablet {
+          &::before {
+            left: -14px;
+          }
+          &::after {
+            bottom: -14px;
+          }
+        }
+      }
+    }
+  }
+  &--right-top {
+    .corner__body {
+      border-radius: 0 40px 0 0;
+      @include tablet {
+        border-radius: 0 20px 0 0;
+      }
+      &::before {
+        top: -40px;
+        left: 0;
+        transform: rotate(-90deg);
+      }
+      &::after {
+        bottom: 0;
+        right: -40px;
+        transform: rotate(-90deg);
+      }
+      @include tablet {
+        &::before {
+          top: -20px;
+        }
+        &::after {
+          right: -20px;
+        }
+      }
+      &--mini {
+        border-radius: 0 30px 0 0;
+        &::before {
+          top: -26px;
+        }
+        &::after {
+          right: -26px;
+        }
+        @include tablet {
+          &::before {
+            top: -14px;
+          }
+          &::after {
+            right: -14px;
+          }
+        }
+      }
+    }
+  }
+  &--left-top {
+    .corner__body {
+      border-radius: 40px 0 0 0;
+      @include tablet {
+        border-radius: 20px 0 0 0;
+      }
+      &::before {
+        top: -40px;
+        right: 0;
+        transform: rotate(180deg);
+      }
+      &::after {
+        bottom: 0;
+        left: -40px;
+        transform: rotate(180deg);
+      }
+      @include tablet {
+        &::before {
+          top: -20px;
+        }
+        &::after {
+          left: -20px;
+        }
+      }
+    }
+  }
+}

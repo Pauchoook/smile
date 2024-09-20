@@ -1,0 +1,26 @@
+.doctor-name {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--athens-gray);
+  gap: 12px;
+  font-size: 14px;
+  line-height: 143%;
+  color: var(--gun-powder);
+  @include tablet {
+    padding: 4px 8px;
+    gap: 8px;
+    font-size: 12px;
+    line-height: 150%;
+  }
+  &__icon {
+    width: 16px;
+    height: 16px;
+    color: var(--melrose);
+    @include tablet {
+      width: 14px;
+      height: 14px;
+    }
+  }
+}

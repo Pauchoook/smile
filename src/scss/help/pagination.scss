@@ -1,0 +1,36 @@
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px 10px 10px 0px;
+  &__btn {
+    @include flex-center;
+    position: relative;
+    height: 40px;
+    width: 40px;
+    &::before {
+      position: absolute;
+      content: "";
+      inset: -10px;
+      border-radius: 50%;
+      border: 2px solid white;
+      transition: border-color 0.2s ease;
+    }
+    &.active {
+      &::before {
+        border-color: var(--melrose);
+      }
+    }
+    @include hover {
+      &::before {
+        border-color: var(--melrose);
+      }
+    }
+  }
+  &__img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    max-width: none;
+  }
+}

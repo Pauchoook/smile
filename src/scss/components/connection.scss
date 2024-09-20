@@ -1,0 +1,302 @@
+.connection {
+  padding-bottom: 90px;
+  border-radius: 0 0 60px 60px;
+  background-color: white;
+  z-index: 10;
+  &--app {
+    padding-top: 90px;
+    border-radius: 0;
+    background-color: transparent;
+    @include tablet {
+      padding-top: 60px;
+      .connection__content {
+        max-width: 210px;
+      }
+    }
+    @include mobile {
+      .connection__form-title {
+        max-width: 240px;
+      }
+    }
+  }
+  &__body {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #f6ebe5 0%, #e7e0fc 100%);
+    z-index: 1;
+    @include desktop-min {
+      flex-direction: column;
+    }
+    @include tablet {
+      gap: 30px;
+      padding: 20px;
+    }
+    @include mobile {
+      padding: 16px;
+    }
+  }
+  &__decor {
+    position: absolute;
+    width: 2100px;
+    max-width: none;
+    left: -890px;
+    bottom: -490px;
+    z-index: -2;
+    @include tablet {
+      width: 850px;
+      top: 145px;
+      left: -330px;
+    }
+  }
+  &__percent {
+    position: absolute;
+    font-weight: 900;
+    font-size: 38px;
+    line-height: 100%;
+    padding: 4px 14px;
+    color: var(--orange);
+    background-color: white;
+    border-radius: 16px 16px 0 16px;
+    left: 445px;
+    bottom: 110px;
+    z-index: 4;
+    @include desktop {
+      left: 249px;
+      bottom: 55px;
+      font-size: 22px;
+    }
+    @include desktop-min {
+      left: auto;
+      right: 265px;
+      bottom: 120px;
+      font-size: 38px;
+    }
+    @include laptop {
+      right: 170px;
+      font-size: 32px;
+    }
+    @include laptop-min {
+      bottom: auto;
+      top: 240px;
+    }
+    @include tablet {
+      right: 150px;
+    }
+    @include tablet-min {
+      top: 150px;
+    }
+    @include mobile {
+      display: none;
+    }
+  }
+  &__discount {
+    position: absolute;
+    left: 340px;
+    bottom: 60px;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 118%;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    max-width: 235px;
+    width: 100%;
+    background: url("@img/picture/teeth-orange.png") top -6px right 44px / 80px 75px no-repeat;
+    background-color: var(--orange);
+    z-index: 1;
+    @include desktop {
+      left: 30px;
+      bottom: 20px;
+      max-width: 180px;
+    }
+    @include desktop-min {
+      left: auto;
+      right: 175px;
+    }
+    @include laptop {
+      display: none;
+    }
+  }
+  &__women {
+    position: absolute;
+    width: 240px;
+    left: 470px;
+    bottom: 0;
+    z-index: 2;
+    @include desktop {
+      width: 120px;
+      left: 300px;
+      z-index: -2;
+    }
+    @include desktop-min {
+      width: 240px;
+      left: auto;
+      right: 50px;
+    }
+    @include laptop-min {
+      bottom: 170px;
+      width: 205px;
+    }
+    @include tablet {
+      width: 200px;
+      right: 0;
+      bottom: 230px;
+    }
+    @include tablet-min {
+      bottom: 310px;
+    }
+    @include mobile {
+      bottom: 330px;
+      width: 175px;
+    }
+  }
+  &__corner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    .corner__body {
+      width: 315px;
+      height: 75px;
+      @include tablet {
+        width: 120px;
+        height: 40px;
+      }
+    }
+  }
+  &__doctor {
+    position: absolute;
+    width: 300px;
+    left: 415px;
+    bottom: 0;
+    z-index: -1;
+    @include desktop {
+      left: 320px;
+    }
+    @include desktop-min {
+      left: auto;
+      right: 50px;
+    }
+    @include laptop-min {
+      bottom: 190px;
+    }
+    @include tablet-min {
+      width: 200px;
+      bottom: 300px;
+    }
+    @include mobile {
+      right: 10px;
+      bottom: 335px;
+    }
+  }
+  &__info {
+    max-width: 440px;
+  }
+  &__title {
+    margin-bottom: 16px;
+    @include mobile {
+      max-width: 245px;
+      font-size: 18px;
+    }
+  }
+  &__content {
+    font-size: 16px;
+    line-height: 150%;
+    margin: 0px 0px 32px 0px;
+    @include tablet {
+      font-size: 14px;
+      line-height: 143%;
+      margin-bottom: 24px;
+    }
+  }
+  &__social {
+    @include tablet {
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+  // &__social-item {
+  //   position: relative;
+  //   display: flex;
+  //   align-items: center;
+  //   gap: 14px;
+  // }
+  // &__wrapper-icon {
+  //   @include flex-center;
+  //   width: 48px;
+  //   height: 48px;
+  //   border-radius: 50%;
+  //   background-color: white;
+  // }
+  // &__icon {
+  //   width: 26px;
+  //   height: 26px;
+  // }
+  // &__inside {
+  //   position: absolute;
+  //   left: 44px;
+  // }
+  // &__social-info {
+  //   border-radius: 50px;
+  //   padding: 5px 16px;
+  //   background-color: white;
+  // }
+  // &__social-title {
+  //   display: block;
+  //   font-size: 12px;
+  //   line-height: 150%;
+  // }
+  // &__social-btn {
+  //   font-weight: 500;
+  //   font-size: 14px;
+  //   line-height: 143%;
+  //   @include hover {
+  //     text-decoration: underline;
+  //   }
+  // }
+  &__wrapper-form {
+    max-width: 695px;
+    @include laptop-min {
+      max-width: none;
+    }
+  }
+  &__form-title {
+    max-width: 310px;
+    margin-bottom: 20px;
+    @include tablet {
+      max-width: 250px;
+    }
+    @include mobile {
+      max-width: 220px;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    row-gap: 20px;
+    @include tablet {
+      gap: 12px;
+    }
+  }
+  &__form-label {
+    flex: 0 1 calc(33% - 7px);
+    @include tablet {
+      flex-basis: calc(50% - 7px);
+    }
+    @include tablet-min {
+      flex-basis: 100%;
+    }
+  }
+  &__form-btn {
+    flex: 1;
+    @include tablet {
+      flex: 0 1 400px;
+    }
+  }
+}

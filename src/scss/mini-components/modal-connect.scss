@@ -1,0 +1,35 @@
+.modal-connect {
+  &--call {
+    .modal-connect__title {
+      text-align: left;
+    }
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 12px;
+    @include tablet {
+      text-align: left;
+    }
+  }
+  &__content {
+    font-size: 16px;
+    line-height: 150%;
+    margin: 0px 0px 30px 0px;
+    @include tablet {
+      font-size: 14px;
+      line-height: 143%;
+      margin-bottom: 24px;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  &__label {
+    width: 100%;
+  }
+  &__btn {
+    width: 100%;
+  }
+}

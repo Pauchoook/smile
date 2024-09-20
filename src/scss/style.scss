@@ -1,0 +1,46 @@
+@import "./fonts/fonts";
+@import "./base/normalize";
+@import "./base/vars";
+@import "./base/templates";
+@import "./base/settings";
+@import "./base/media";
+@import "./base/body-config";
+@import "./base/config-container";
+
+// ui
+@import "./ui/button";
+@import "./ui/list";
+@import "./ui/title";
+@import "./ui/form";
+
+// help
+@import "./help/corner";
+@import "./help/slider-nav";
+@import "./help/burger";
+@import "./help/modal";
+@import "./help/select";
+@import "./help/before-after";
+@import "./help/pagination";
+@import "./help/scrollbar";
+@import "./help/star-rating";
+@import "./help/section";
+@import "./help/doctor-name";
+@import "./help/social";
+
+// mini-components
+@import "./mini-components/modal-connect";
+
+// components
+@import "./components/header";
+
+@import "./components/hero";
+@import "./components/services";
+@import "./components/connection";
+@import "./components/our-doctors";
+@import "./components/portfolio";
+@import "./components/advantages";
+@import "./components/rating";
+@import "./components/reviews";
+@import "./components/contacts";
+
+@import "./components/footer";

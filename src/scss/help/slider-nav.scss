@@ -1,0 +1,30 @@
+.slider-nav {
+  display: flex;
+  gap: 16px;
+  &__btn {
+    @include flex-center;
+    border: 1px solid var(--melrose);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    color: var(--melrose);
+    transition: color .2s ease, background-color .2s ease;
+    @include hover {
+      color: white;
+      background-color: var(--melrose);
+    }
+    &.swiper-button-disabled {
+      opacity: 0.6;
+    }
+    &--prev {
+      .slider-nav__arrow {
+        transform: rotate(180deg) translateX(1px);
+      }
+    }
+  }
+  &__arrow {
+    width: 7px;
+    height: 12px;
+    transform: translateX(1px);
+  }
+}
