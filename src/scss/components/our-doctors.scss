@@ -1,7 +1,10 @@
 .our-doctors {
-  position: relative;
   padding: 90px 0px;
-  z-index: 1;
+  &--clean {
+    &::before {
+      display: none;
+    }
+  }
   &::before {
     position: absolute;
     content: "";

@@ -1,0 +1,84 @@
+.trust {
+  padding: 90px 0px;
+  @include tablet {
+    padding: 40px 0px;
+  }
+  &__title {
+    margin-bottom: 40px;
+    @include tablet {
+      margin-bottom: 24px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    @include desktop-min {
+      gap: 20px;
+    }
+    @include tablet {
+      gap: 16px;
+    }
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 30px 0 30px 30px;
+    padding: 30px;
+    background-color: white;
+    flex: 0 1 calc(25% - 18px);
+    gap: 15px;
+    min-height: 240px;
+    @include desktop-min {
+      padding: 20px;
+      flex-basis: calc(25% - 15px);
+    }
+    @include laptop {
+      flex-basis: calc(33% - 11px);
+    }
+    @include laptop-min {
+      flex-basis: calc(50% - 10px);
+    }
+    @include tablet {
+      flex-basis: calc(50% - 8px);
+      border-radius: 16px 0 16px 16px;
+      padding: 16px;
+      min-height: auto;
+    }
+    @include tablet-min {
+      flex-basis: 100%;
+      gap: 8px;
+    }
+  }
+  &__item-number {
+    position: absolute;
+    top: 0;
+    right: 0;
+    .corner__body {
+      padding: 0px 0px 14px 14px;
+    }
+    span {
+      @include flex-center;
+      background-color: var(--orange);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 125%;
+      @include tablet-min {
+        font-weight: 500;
+      }
+    }
+  }
+  &__item-title {
+    max-width: calc(100% - 60px);
+  }
+  &__content {
+    font-size: 14px;
+    line-height: 143%;
+  }
+}

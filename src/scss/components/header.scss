@@ -1,12 +1,16 @@
 .header {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   padding: 15px 0px;
-  background-color: white;
+  z-index: 100;
   &__body {
     @include flex-between;
     position: relative;
     padding: 13px 15px;
     border: 1px solid var(--athens-gray);
+    background-color: white;
     border-radius: 20px;
     @include laptop-min {
       flex-direction: row-reverse;

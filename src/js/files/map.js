@@ -13,7 +13,7 @@ export default function map() {
 
       const placemark = new ymaps.Placemark(center, {}, {
         iconLayout: 'default#image',
-        iconImageHref: '../img/elements/map-marker.svg',
+        iconImageHref: './img/elements/map-marker.svg',
         iconImageSize: [36, 36]
       });
 

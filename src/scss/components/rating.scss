@@ -1,5 +1,10 @@
 .rating {
   padding: 90px 0px;
+  &--clean {
+    &::before {
+      display: none;
+    }
+  }
   &::before {
     position: absolute;
     content: "";

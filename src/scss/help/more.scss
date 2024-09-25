@@ -1,0 +1,18 @@
+.btn-more {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+  color: var(--orange);
+  transition: color 0.2s ease;
+  @include hover {
+    color: var(--melrose);
+  }
+
+  @include tablet {
+    font-size: 14px;
+    line-height: 114%;
+  }
+}
+.more {
+  @include text-overflow(9);
+}

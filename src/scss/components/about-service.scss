@@ -1,0 +1,122 @@
+.about-service {
+  padding: 90px 0px 60px 0px;
+  @include tablet {
+    padding: 40px 0px 20px 0px;
+  }
+  &__body {
+    display: flex;
+    align-items: end;
+    &.show {
+      align-items: start;
+      .about-service__info {
+        border-radius: 40px 0px 40px 40px;
+        &::before {
+          display: none;
+        }
+      }
+      .about-service__wrapper-img {
+        border-radius: 0px 40px 40px 0px;
+        &::before {
+          display: block;
+        }
+      }
+    }
+    @include laptop-min {
+      flex-wrap: wrap;
+      gap: 35px;
+      background-color: white;
+      padding: 30px;
+      border-radius: 20px;
+    }
+    @include tablet {
+      padding: 20px;
+    }
+  }
+  &__info {
+    position: relative;
+    padding: 40px;
+    flex: 1;
+    background-color: white;
+    border-radius: 40px 0 0 40px;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 40px;
+      height: 40px;
+      background: url("@img/elements/corner.svg") 0 0 / cover no-repeat;
+      transform: rotate(180deg);
+      right: 0;
+      top: -40px;
+    }
+    @include laptop-min {
+      padding: 0;
+      border-radius: 0;
+      background-color: transparent;
+      flex: none;
+      width: 100%;
+      &::before {
+        display: none;
+      }
+    }
+  }
+  &__title {
+    max-width: 495px;
+    margin-bottom: 16px;
+    @include tablet {
+      margin-bottom: 8px;
+    }
+  }
+  &__content {
+    margin: 0;
+    font-size: 16px;
+    line-height: 150%;
+    margin-bottom: 24px;
+    @include tablet {
+      font-size: 14px;
+      line-height: 143%;
+      margin-bottom: 16px;
+    }
+  }
+  &__wrapper-img {
+    position: relative;
+    padding: 60px;
+    border-radius: 40px 40px 40px 0;
+    background-color: white;
+    &::before {
+      position: absolute;
+      display: none;
+      content: "";
+      width: 40px;
+      height: 40px;
+      background: url("@img/elements/corner.svg") 0 0 / cover no-repeat;
+      left: 0;
+      bottom: -40px;
+    }
+    @include laptop-min {
+      padding: 0;
+      border-radius: 0px;
+      background-color: transparent;
+      width: 100%;
+      &::before {
+        display: none !important;
+      }
+    }
+  }
+  &__img {
+    width: 600px;
+    height: 410px;
+    border-radius: 30px;
+    object-fit: cover;
+    @include desktop-min {
+      width: 440px;
+      height: 390px;
+    }
+    @include laptop-min {
+      width: 100%;
+      height: auto;
+    }
+    @include tablet {
+      border-radius: 16px;
+    }
+  }
+}

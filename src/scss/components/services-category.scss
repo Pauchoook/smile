@@ -1,0 +1,152 @@
+.services-category {
+  padding: 90px 0px;
+  background-color: white;
+  border-radius: 60px;
+  @include tablet {
+    border-radius: 30px;
+    padding: 40px 0px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &__btn {
+    @include flex-between;
+    gap: 50px;
+    border-radius: 30px 60px 60px 30px;
+    padding: 10px 25px;
+    background-color: var(--alabaster);
+    @include hover {
+      .services-category__title {
+        color: var(--portage);
+      }
+      .services-category__nav-btn {
+        transform: translateX(-16px);
+      }
+    }
+    @include desktop-min {
+      gap: 25px;
+    }
+    @include laptop {
+      flex-wrap: wrap;
+    }
+    @include tablet {
+      gap: 16px;
+      padding: 16px;
+      border-radius: 16px;
+      @include hover {
+        .services-category__title {
+          color: var(--portage);
+        }
+        .services-category__nav-btn {
+          transform: translateX(-14px);
+        }
+      }
+    }
+  }
+  &__title {
+    flex: 1;
+    transition: color .2s ease;
+    @include laptop {
+      flex: 0 1 calc(100% - 165px);
+    }
+  }
+  &__img {
+    width: 140px;
+    height: 80px;
+    border-radius: 20px;
+    @include laptop-min {
+      width: 120px;
+      height: 60px;
+    }
+    @include tablet {
+      border-radius: 16px;
+      width: 90px;
+      height: 44px;
+    }
+  }
+  &__content {
+    font-size: 16px;
+    line-height: 150%;
+    margin: 0;
+    flex: 0 1 524px;
+    @include desktop-min {
+      flex-basis: 415px;
+    }
+    @include tablet {
+      font-size: 14px;
+      line-height: 143%;
+      flex-basis: 100%;
+    }
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: url("@img/elements/oval-inside-violet.svg") center right 63px / 21px 26px
+      no-repeat;
+    @include tablet {
+      background-size: 20px 21px;
+      background-position: center right 49px;
+      gap: 14px;
+    }
+  }
+  &__price {
+    padding: 8px 25px;
+    border-radius: 50px;
+    background-color: var(--chalk);
+    max-width: 175px;
+    @include desktop-min {
+      padding-right: 25px;
+      padding-left: 25px;
+    }
+    @include tablet {
+      padding: 5px 20px;
+    }
+  }
+  &__price-title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    margin: 0;
+    @include tablet {
+      font-size: 12px;
+      line-height: 150%;
+    }
+  }
+  &__price-value {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 125%;
+    color: var(--portage);
+    @include desktop-min {
+      font-size: 22px;
+    }
+    @include tablet {
+      font-size: 20px;
+      line-height: 130%;
+    }
+  }
+  &__nav-btn {
+    @include flex-center;
+    border-radius: 50%;
+    width: 66px;
+    height: 66px;
+    background-color: var(--chalk);
+    color: var(--portage);
+    transition: transform .2s ease;
+    @include tablet {
+      width: 52px;
+      height: 52px;
+    }
+  }
+  &__arrow {
+    width: 11px;
+    height: 18px;
+    @include tablet {
+      width: 10px;
+      height: 12px;
+    }
+  }
+}

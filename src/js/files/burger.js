@@ -3,6 +3,7 @@ export default function burger() {
   const burgerBtn = document.querySelector("#burger-btn");
   const socialHeader = document.querySelector(".header__social");
   const navHeader = document.querySelector(".header__nav");
+  const navWrapperFirst = burger.querySelector(".burger__wrapper");
   if (burger) {
     burgerBtn.addEventListener("click", (e) => {
       e.stopPropagation();
@@ -13,6 +14,7 @@ export default function burger() {
         burgerBtn.classList.add("active");
         socialHeader.classList.add("open");
         navHeader.classList.add("show");
+        navWrapperFirst.classList.add("open");
 
         document.body.addEventListener("click", handleClose);
       } else {
@@ -25,6 +27,7 @@ export default function burger() {
       burgerBtn.classList.remove("active");
       socialHeader.classList.remove("open");
       navHeader.classList.remove("show");
+      navWrapperFirst.classList.remove("open");
 
       return document.body.removeEventListener("click", handleClose);
     }

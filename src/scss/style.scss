@@ -26,6 +26,8 @@
 @import "./help/section";
 @import "./help/doctor-name";
 @import "./help/social";
+@import "./help/breadcrumbs";
+@import "./help/more";
 
 // mini-components
 @import "./mini-components/modal-connect";
@@ -42,5 +44,11 @@
 @import "./components/rating";
 @import "./components/reviews";
 @import "./components/contacts";
+@import "./components/hero-main";
+@import "./components/services-gallery";
+@import "./components/about-service";
+@import "./components/consultation";
+@import "./components/services-category";
+@import "./components/trust";
 
 @import "./components/footer";

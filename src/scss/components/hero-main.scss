@@ -1,0 +1,214 @@
+.hero-main {
+  padding: 125px 0px 90px 0px;
+  background-color: var(--alabaster);
+  overflow: hidden;
+  &::before {
+    position: absolute;
+    content: "";
+    top: 40px;
+    left: -350px;
+    width: 2200px;
+    height: 620px;
+    background: url('@img/decor/hero-main-decor.png') 0 0 / contain no-repeat;
+    z-index: -1;
+  }
+  @include tablet {
+    padding: 90px 0px 40px 0px;
+    &::before {
+      width: 1200px;
+      height: 500px;
+      top: auto;
+      left: -250px;
+      bottom: -53px;
+      transform: rotate(183deg);
+    }
+  }
+  &__container {
+    display: flex;
+    gap: 30px;
+    @include desktop-min {
+      flex-wrap: wrap;
+    }
+    @include tablet {
+      gap: 16px;
+    }
+  }
+  &__main {
+    flex: 0 1 680px;
+    padding: 30px;
+    border-radius: 30px;
+    background: url("@img/picture/teeth-service.png") bottom -18px right -16px / 116px auto
+      no-repeat;
+    background-color: white;
+    @include desktop {
+      flex: 1;
+    }
+    @include desktop-min {
+      flex: 0 1 100%;
+    }
+    @include tablet {
+      padding: 20px;
+      border-radius: 20px;
+      background-size: 80px auto;
+      background-position: right -10px bottom -13px;
+    }
+  }
+  &__head {
+    @include flex-between;
+    margin-bottom: 20px;
+    @include tablet {
+      margin-bottom: 16px;
+    }
+  }
+  &__price {
+    display: block;
+    width: fit-content;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 133%;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: var(--portage);
+    background-color: var(--chalk);
+    @include tablet {
+      font-size: 16px;
+      line-height: 150%;
+      padding: 6px 16px;
+      margin-top: 12px;
+    }
+  }
+  &__title {
+    margin-bottom: 24px;
+    max-width: 540px;
+    @include tablet {
+      margin-bottom: 12px;
+    }
+  }
+  &__content {
+    margin: 0;
+    font-size: 16px;
+    line-height: 150%;
+    max-width: 540px;
+    @include tablet {
+      font-size: 14px;
+      line-height: 143%;
+    }
+  }
+  &__middle {
+    flex: 1;
+    @include tablet {
+      flex: 0 1 100%;
+    }
+  }
+  &__middle-img {
+    display: block;
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    @include tablet {
+      height: 185px;
+      max-width: 400px;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+  &__middle-info {
+    position: relative;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: white;
+    @include hover {
+      .btn-circle {
+        background-color: var(--melrose);
+        color: white;
+      }
+    }
+    @include tablet {
+      display: none;
+    }
+  }
+  &__middle-corner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    .corner__body {
+      padding: 0px 0px 14px 14px;
+    }
+  }
+  &__middle-title {
+    max-width: calc(100% - 50px);
+    margin-bottom: 24px;
+  }
+  &__middle-rating {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+  &__middle-gallery {
+    display: flex;
+  }
+  &__middle-wrapper-img {
+    @include flex-center;
+    position: relative;
+    width: 40px;
+    height: 40px;
+  }
+  &__middle-gallery-img {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    max-width: none;
+    border: 2px solid var(--alabaster);
+  }
+  &__rating-wrapper {
+    display: flex;
+    align-items: end;
+    gap: 4px;
+  }
+  &__rating-current {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 125%;
+    color: var(--orange);
+  }
+  &__rating-max {
+    font-size: 14px;
+    line-height: 143%;
+    color: var(--manatee);
+  }
+  &__contacts {
+    flex: 1;
+    padding: 30px;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #f6ebe5 0%, #e7e0fc 100%);
+    @include tablet {
+      padding: 20px;
+      border-radius: 20px;
+    }
+    @include mobile {
+      padding: 15px;
+    }
+  }
+  &__contacts-title {
+    margin-bottom: 14px;
+  }
+  &__contacts-content {
+    font-size: 14px;
+    line-height: 143%;
+    margin: 0px 0px 24px 0px;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  &__form-label {
+    width: 100%;
+  }
+  &__form-btn {
+    width: 100%;
+  }
+}

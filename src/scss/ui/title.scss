@@ -6,6 +6,20 @@
     color: var(--orange);
   }
 }
+.title-1 {
+  font-size: 54px;
+  line-height: 111%;
+  @include laptop {
+    font-size: 48px;
+  }
+  @include laptop-min {
+    font-size: 38px;
+  }
+  @include tablet {
+    font-size: 32px;
+    line-height: 112%;
+  }
+}
 .title-2 {
   font-size: 40px;
   line-height: 115%;

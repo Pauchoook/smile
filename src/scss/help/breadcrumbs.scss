@@ -1,0 +1,21 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--manatee);
+  li {
+    font-size: 14px;
+    line-height: 143%;
+    transition: color 0.2s ease;
+    @include tablet {
+      font-size: 12px;
+      line-height: 150%;
+    }
+    &.active {
+      color: var(--gun-powder);
+    }
+    @include hover {
+      color: var(--gun-powder);
+    }
+  }
+}
