@@ -28,6 +28,8 @@
 @import "./help/social";
 @import "./help/breadcrumbs";
 @import "./help/more";
+@import "./help/wrapper-section";
+@import "./help/doctor";
 
 // mini-components
 @import "./mini-components/modal-connect";
@@ -50,5 +52,11 @@
 @import "./components/consultation";
 @import "./components/services-category";
 @import "./components/trust";
+@import "./components/article";
+@import "./components/prices";
+@import "./components/questions";
+@import "./components/team";
+@import "./components/education";
+@import "./components/certificates";
 
 @import "./components/footer";

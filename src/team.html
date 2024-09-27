@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  @@include('html/head.html',{ "title":"pauchoo0k" })
+  <body class="body">
+    @@include('html/components/header.html') @@include('html/widgets/modal-connect.html')
+    @@include('html/widgets/modal-call.html')
+    <main>
+      @@include('html/components/team.html')
+      <section class="section about-service about-service--team">
+        <div class="container">
+          <div class="about-service__body parent-more">
+            <div class="about-service__info">
+              <h2 class="title title-3 about-service__title">
+                Коллектив стоматологической клиники — это дружная команда профессионалов. <span
+                  >Но все-таки самый главный человек в нашей клинике – это пациент!</span
+                > Взрослый или маленький, смелый или опасающийся, каждый найдет среди докторов
+                клиники своего любимого стоматолога!
+              </h2>
+              <p data-lines="6" class="about-service__content more">
+                Лечение в нашей клинике проводится высококвалифицированными специалистам, постоянно проходящими обучение в России и за рубежом. Семь врачей различных специализаций при необходимости собирают консилиум и создают комплексный план лечения, позволяющий оптимизировать степень участия каждого специалиста для достижения наилучшего результата.
+              </p>
+              <button class="btn btn-more">Загрузить еще</button>
+            </div>
+            <div class="about-service__wrapper-img">
+              <img src="@img/picture/about-service.jpg" alt="image" class="about-service__img" />
+            </div>
+          </div>
+        </div>
+      </section>
+      @@include('html/components/consultation.html')
+    </main>
+    @@include('html/components/footer.html')
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=b46e9249-4925-4460-b11c-3aaf76ad0115&lang=ru_RU"
+      type="text/javascript"
+    ></script>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

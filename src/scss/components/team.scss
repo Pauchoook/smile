@@ -1,0 +1,89 @@
+.team {
+  padding: 120px 0px 90px 0px;
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    z-index: -1;
+  }
+  &::before {
+    width: 1145px;
+    height: 270px;
+    background: url("@img/decor/decor.svg") 0 0 / 100% auto no-repeat;
+    right: 0;
+    top: 45px;
+  }
+  &::after {
+    width: 2015px;
+    height: 530px;
+    background: url("@img/decor/decor.svg") 0 0 / 100% auto no-repeat;
+    right: 50px;
+    bottom: -290px;
+    transform: rotate(23deg);
+  }
+  @include tablet {
+    padding: 90px 0px 40px 0px;
+    overflow: hidden;
+    &::before {
+      width: 620px;
+      height: 145px;
+      top: 80px;
+      right: -300px;
+    }
+    &::after {
+      width: 1020px;
+      height: 300px;
+      transform: rotate(72deg);
+      bottom: -280px;
+    }
+  }
+  &__title {
+    margin: 30px 0px 90px 0px;
+    @include tablet {
+      margin: 16px 0px 40px 0px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 50px;
+    @include tablet {
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+  }
+  &__btn {
+    display: block;
+    padding: 10px 30px;
+    @include tablet {
+      padding: 8px 22px;
+      font-size: 14px;
+      line-height: 143%;
+    }
+  }
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    row-gap: 40px;
+    @include desktop-min {
+      gap: 16px;
+    }
+    @include laptop-min {
+      justify-content: center;
+    }
+  }
+  &__doctor {
+    flex: 0 1 calc(25% - 18px);
+    @include desktop-min {
+      flex-basis: calc(25% - 12px);
+    }
+    @include laptop {
+      flex-basis: calc(33% - 8px);
+    }
+    @include laptop-min {
+      flex-basis: 310px;
+    }
+  }
+}

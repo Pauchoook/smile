@@ -1,0 +1,65 @@
+.education {
+  padding: 90px 0px;
+  background-color: white;
+  border-radius: 60px;
+  @include tablet {
+    border-radius: 30px;
+    padding: 40px 0px;
+  }
+  &__title {
+    margin-bottom: 40px;
+    @include tablet {
+      margin-bottom: 24px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border-radius: 60px;
+    background-color: var(--alabaster);
+    gap: 30px;
+    @include tablet {
+      border-radius: 20px;
+      padding: 16px;
+      gap: 16px;
+    }
+    @include tablet-min {
+      flex-wrap: wrap;
+    }
+  }
+  &__year {
+    padding: 10px 30px;
+    border-radius: 50px;
+    background-color: var(--chalk);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 125%;
+    color: var(--portage);
+    flex-shrink: 0;
+    @include tablet {
+      font-size: 20px;
+      line-height: 130%;
+      padding: 8px 24px;
+    }
+  }
+  &__content {
+    margin: 0;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+    color: var(--gun-powder);
+    @include tablet {
+      font-size: 18px;
+      line-height: 133%;
+    }
+    @include tablet-min {
+      width: 100%;
+    }
+  }
+}

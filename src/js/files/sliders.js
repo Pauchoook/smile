@@ -147,4 +147,32 @@ export default function sliders() {
       },
     });
   }
+
+  const certificatesSlider = document.querySelector(".certificates__slider");
+
+  if (certificatesSlider) {
+    const swiper = new Swiper(certificatesSlider, {
+      modules: [Navigation, Autoplay, Scrollbar],
+      speed: 700,
+      slidesPerView: "auto",
+      spaceBetween: 24,
+      grabCursor: true,
+      navigation: {
+        prevEl: ".certificates .slider-nav__btn--prev",
+        nextEl: ".certificates .slider-nav__btn--next",
+      },
+      autoplay: {
+        delay: 4000,
+      },
+      scrollbar: {
+        el: ".certificates__scrollbar",
+        draggable: true,
+      },
+      breakpoints: {
+        744: {
+          slidesPerView: 3,
+        }
+      },
+    });
+  }
 }

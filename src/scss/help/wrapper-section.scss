@@ -1,0 +1,11 @@
+.wrapper-section {
+  position: relative;
+  background-color: white;
+  padding: 90px 0px;
+  border-radius: 60px;
+  z-index: 10;
+  @include tablet {
+    padding: 40px 0px;
+    border-radius: 30px;
+  }
+}

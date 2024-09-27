@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  @@include('html/head.html',{ "title":"pauchoo0k" })
+  <body class="body">
+    @@include('html/components/header.html')
+    @@include('html/widgets/modal-connect.html')
+    @@include('html/widgets/modal-call.html')
+    <main>
+      
+      @@include('html/components/hero-main.html', {"title": "Гингивит"})
+      @@include('html/components/trust.html')
+      @@include('html/components/article.html')
+      @@include('html/components/our-doctors.html')
+      @@include('html/components/connection-app.html')
+      @@include('html/components/rating.html')
+      <div class="wrapper-section">
+        @@include('html/components/prices.html')
+        @@include('html/components/questions.html')
+      </div>
+      <section class="section about-service about-service--decor">
+        <div class="container">
+          <div class="about-service__body parent-more">
+            <div class="about-service__info">
+              <h2 class="title title-2 about-service__title">
+                Услуги клиники <span>«Фабрика Улыбок»</span>
+              </h2>
+              <p class="about-service__content more">
+                Мы предоставляем платные услуги стоматологии, и наш прайс-лист услуг содержит все
+                необходимые информацию о стоимости каждой процедуры. Зачастую цены на платные услуги в
+                других клиниках могут быть завышены, но в клинике «Антика» мы стараемся предложить только
+                честные и адекватные цены. <br />
+                <br />
+                Для вашего удобства, у нас есть возможность получить информацию о стоимости услуг
+                стоматологической клиники по телефону. Просто позвоните нам, и наши дружелюбные сотрудники
+                обязательно помогут вам с вашими вопросами о стоимости услуг стоматологической клиники. Мы
+                предоставляем платные услуги стоматологии, и наш прайс-лист услуг содержит все необходимые
+                информацию о стоимости каждой процедуры. Зачастую цены на платные услуги в других клиниках
+                могут быть завышены, но в клинике «Антика» мы стараемся предложить только честные и
+                адекватные цены. <br />
+                <br />
+                Для вашего удобства, у нас есть возможность получить информацию о стоимости услуг
+                стоматологической клиники по телефону. Просто позвоните нам, и наши дружелюбные сотрудники
+                обязательно помогут вам с вашими вопросами о стоимости услуг стоматологической клиники.
+              </p>
+              <button class="btn btn-more">Загрузить еще</button>
+            </div>
+            <div class="about-service__wrapper-img">
+              <img src="@img/picture/about-service.jpg" alt="image" class="about-service__img" />
+            </div>
+          </div>
+        </div>
+      </section>
+      @@include('html/components/reviews.html')
+      @@include('html/components/consultation.html')
+
+    </main>
+    @@include('html/components/footer.html')
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=b46e9249-4925-4460-b11c-3aaf76ad0115&lang=ru_RU" type="text/javascript"></script>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

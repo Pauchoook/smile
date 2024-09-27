@@ -5,22 +5,26 @@
   &::before {
     position: absolute;
     content: "";
-    top: 40px;
-    left: -350px;
-    width: 2200px;
-    height: 620px;
-    background: url('@img/decor/hero-main-decor.png') 0 0 / contain no-repeat;
+    bottom: 50px;
+    left: -300px;
+    width: 2240px;
+    height: 540px;
+    background: url("@img/decor/decor.svg") 0 0 / contain no-repeat;
     z-index: -1;
+  }
+  &--doctor {
+    .hero-main__main {
+      background-image: none;
+    }
   }
   @include tablet {
     padding: 90px 0px 40px 0px;
     &::before {
-      width: 1200px;
-      height: 500px;
-      top: auto;
-      left: -250px;
-      bottom: -53px;
-      transform: rotate(183deg);
+      width: 1230px;
+      height: 300px;
+      bottom: 80px;
+      left: -470px;
+      transform: rotate(145deg);
     }
   }
   &__container {
@@ -77,6 +81,21 @@
       margin-top: 12px;
     }
   }
+  &__skill {
+    display: block;
+    width: fit-content;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    padding: 8px 16px;
+    border-radius: 50px;
+    color: var(--orange);
+    background-color: var(--peach);
+    @include tablet {
+      margin-top: 12px;
+      padding: 6px 16px;
+    }
+  }
   &__title {
     margin-bottom: 24px;
     max-width: 540px;
@@ -89,6 +108,46 @@
     font-size: 16px;
     line-height: 150%;
     max-width: 540px;
+    @include tablet {
+      font-size: 14px;
+      line-height: 143%;
+    }
+  }
+  &__footer {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-top: 20px;
+    border-top: 1px solid var(--athens-gray);
+    @include tablet {
+      gap: 12px;
+      padding-top: 10px;
+      margin-top: 16px;
+    }
+  }
+  &__footer-img {
+    width: 60px;
+    @include tablet {
+      width: 54px;
+    }
+  }
+  &__footer-info {
+  }
+  &__footer-title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    color: var(--manatee);
+    @include tablet {
+      font-size: 12px;
+      line-height: 150%;
+    }
+  }
+  &__footer-content {
+    margin: 0;
+    font-size: 16px;
+    line-height: 150%;
     @include tablet {
       font-size: 14px;
       line-height: 143%;
@@ -189,7 +248,7 @@
       border-radius: 20px;
     }
     @include mobile {
-      padding: 15px;
+      display: none;
     }
   }
   &__contacts-title {
@@ -210,5 +269,12 @@
   }
   &__form-btn {
     width: 100%;
+  }
+  &__btn-call {
+    display: none;
+    width: 100%;
+    @include mobile {
+      display: block;
+    }
   }
 }

@@ -1,0 +1,148 @@
+.article {
+  padding: 90px 0px;
+  background-color: white;
+  border-radius: 60px;
+  @include tablet {
+    border-radius: 30px;
+    padding: 40px 0px;
+  }
+  &__body {
+    display: flex;
+    position: relative;
+    gap: 50px;
+    @include desktop-min {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @include tablet {
+      gap: 30px;
+    }
+  }
+  &__info {
+    flex: 1;
+    @include desktop-min {
+      flex: none;
+      width: 100%;
+    }
+  }
+  &__title {
+    max-width: 380px;
+    margin-bottom: 24px;
+  }
+  &__content {
+    font-size: 16px;
+    line-height: 150%;
+    margin: 0px 0px 24px 0px;
+    @include laptop-min {
+      font-size: 14px;
+      line-height: 143%;
+      margin-bottom: 16px;
+    }
+  }
+  &__wrapper-img {
+    position: relative;
+    width: 795px;
+    height: 445px;
+    @include desktop {
+      width: 630px;
+      height: 350px;
+    }
+    @include laptop-min {
+      height: auto;
+    }
+  }
+  &__profile {
+    position: absolute;
+    background-color: white;
+    padding: 10px 20px 20px 10px;
+    border-radius: 0px 0px 40px 0px;
+    top: 0;
+    left: -180px;
+    z-index: 10;
+    @include laptop-min {
+      left: 0;
+    }
+    @include tablet {
+      padding: 0px 14px 14px 0px;
+      border-radius: 0 0 32px 0;
+    }
+  }
+  &__profile-body {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 80px;
+    padding: 0px 16px 0px 0px;
+    max-width: 260px;
+    background: linear-gradient(90deg, #f6ebe5 0%, #e7e0fc 100%);
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: 40px;
+      height: 40px;
+      background: url("@img/elements/corner.svg") 0 0 / 100% 100% no-repeat;
+    }
+    &::before {
+      bottom: -40px;
+      right: 70px;
+    }
+    &::after {
+      top: 0px;
+      right: -40px;
+    }
+    @include laptop-min {
+      &::before {
+        right: auto;
+        left: 0;
+      }
+    }
+    @include tablet {
+      padding-right: 8px;
+      max-width: 200px;
+      &::before,
+      &::after {
+        width: 20px;
+        height: 20px;
+      }
+      &::before {
+        bottom: -20px;
+      }
+      &::after {
+        right: -20px;
+      }
+    }
+  }
+  &__avatar {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    @include tablet {
+      width: 44px;
+      height: 44px;
+    }
+  }
+  &__profile-content {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    color: var(--studio);
+    @include tablet {
+      font-size: 12px;
+      line-height: 150%;
+    }
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 40px;
+    @include laptop-min {
+      height: auto;
+    }
+    @include tablet {
+      border-radius: 20px;
+    }
+  }
+}

@@ -3,6 +3,27 @@
   @include tablet {
     padding-bottom: 40px;
   }
+  &--doctor {
+    z-index: 5;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 2605px;
+      height: 740px;
+      background: url("@img/decor/decor.svg") 0 0 / 100% 100% no-repeat;
+      right: 0;
+      bottom: -50px;
+      transform: rotate(144deg) scale(1, -1);
+    }
+    @include tablet {
+      &::before {
+        width: 1230px;
+        height: 300px;
+        transform: rotate(55deg);
+        bottom: 190px;
+      }
+    }
+  }
   &__body {
     position: relative;
     border-radius: 30px;
