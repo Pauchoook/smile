@@ -2628,10 +2628,10 @@ body {
   height: 20px
 }
 .doctor__corner .corner__body::before {
-  top: -20px
+  top: -19px
 }
 .doctor__corner .corner__body::after {
-  right: -20px
+  right: -19px
 }
 .doctor__skill {
   display: block;
@@ -5937,10 +5937,10 @@ body {
     border-radius: 0 0 20px 0
   }
   .corner--right-bottom .corner__body::before {
-    bottom: -20px
+    bottom: -19px
   }
   .corner--right-bottom .corner__body::after {
-    right: -20px
+    right: -19px
   }
   .corner--left-bottom .corner__body {
     border-radius: 0 0 0 20px

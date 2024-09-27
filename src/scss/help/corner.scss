@@ -55,10 +55,10 @@
       }
       @include tablet {
         &::before {
-          bottom: -20px;
+          bottom: -19px;
         }
         &::after {
-          right: -20px;
+          right: -19px;
         }
       }
     }
