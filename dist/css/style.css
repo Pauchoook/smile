@@ -2585,6 +2585,10 @@ body {
   border-radius: 60px;
   z-index: 10
 }
+.wrapper-section--bottom {
+  padding-top: 0;
+  border-radius: 0 0 60px 60px
+}
 .doctor {
   box-sizing: border-box;
   display: flex!important;
@@ -6009,6 +6013,9 @@ body {
   .wrapper-section {
     padding: 40px 0;
     border-radius: 30px
+  }
+  .wrapper-section--bottom {
+    border-radius: 0 0 30px 30px
   }
   .doctor {
     font-size: 18px
