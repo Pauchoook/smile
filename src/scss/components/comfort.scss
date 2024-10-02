@@ -1,6 +1,22 @@
 .comfort {
   overflow: hidden;
   padding: 90px 0px;
+  &--decor {
+    &::before {
+      position: absolute;
+      content: "";
+      background: url('@img/decor/decor.svg') 0 0 / 100% 100% no-repeat;
+      width: 2590px;
+      height: 630px;
+      right: 0;
+      top: 550px;
+      transform: rotate(-115deg);
+      z-index: -1;
+      @include tablet {
+        display: none;
+      }
+    }
+  }
   @include tablet {
     padding: 40px 0px;
   }

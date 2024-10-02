@@ -1,0 +1,152 @@
+.contacts-main {
+  overflow: hidden;
+  padding: 90px 0px;
+  @include tablet {
+    padding-bottom: 40px;
+  }
+  &__body {
+    display: flex;
+    gap: 24px;
+    @include desktop-min {
+      flex-wrap: wrap;
+    }
+  }
+  &__info {
+    flex: 0 1 440px;
+    background-color: white;
+    border-radius: 30px;
+    padding: 40px;
+    @include laptop-min {
+      flex-basis: calc(50% - 12px);
+    }
+    @include tablet {
+      flex-basis: 100%;
+      border-radius: 20px;
+      padding: 20px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    @include tablet {
+      gap: 12px;
+    }
+  }
+  &__item {
+    @include flex-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    a {
+      transition: color 0.2s ease;
+      @include hover {
+        color: var(--orange);
+      }
+    }
+  }
+  &__item-title {
+    display: block;
+    font-size: 16px;
+    line-height: 150%;
+    margin-bottom: 4px;
+    color: var(--manatee);
+    @include tablet {
+      font-size: 14px;
+      line-height: 143%;
+    }
+  }
+  &__item-value {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 133%;
+    @include tablet {
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+  &__item-cricle {
+    @include flex-center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: var(--orange-light);
+  }
+  &__item-icon {
+    width: 22px;
+    height: 22px;
+    color: var(--orange);
+  }
+  &__social {
+    gap: 12px;
+    .social__btn {
+      background-position: center left 35px;
+    }
+    .social__wrapper-icon {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  &__map {
+    flex: 1;
+    border-radius: 30px;
+    border: 2px solid white;
+    overflow: hidden;
+    @include tablet {
+      height: 300px;
+    }
+    @include mobile {
+      height: 230px;
+    }
+  }
+  &__gallery {
+    flex: 0 1 290px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    @include desktop-min {
+      align-items: start;
+      flex: none;
+      flex-direction: row;
+      width: 100%;
+    }
+    @include tablet {
+      flex-wrap: wrap;
+    }
+  }
+  &__gallery-img {
+    width: 100%;
+    height: calc(50% - 12px);
+    object-fit: cover;
+    object-position: top;
+    border-radius: 20px;
+    @include desktop-min {
+      width: 290px;
+      height: auto;
+    }
+    @include tablet {
+      width: 345px;
+      height: 160px;
+      margin: 0 auto;
+    }
+  }
+  &__wrapper-logo {
+    @include flex-center;
+    border-radius: 30px;
+    height: 210px;
+    background-color: white;
+    @include desktop-min {
+      width: 290px;
+    }
+    @include tablet {
+      width: 100%;
+      height: 160px;
+      border-radius: 20px;
+    }
+  }
+  &__logo {
+    width: 175px;
+    @include tablet {
+      width: 130px;
+    }
+  }
+}

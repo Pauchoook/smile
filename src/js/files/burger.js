@@ -39,8 +39,8 @@ export default function burger() {
     buttonsNav.forEach((btn) => {
       btn.addEventListener("click", () => {
         const idNav = btn.dataset.nav;
-        const currentMenu = btn.closest(".nav");
-        const nextMenu = document.querySelector(`.nav[data-nav="${idNav}"]`);
+        const currentMenu = btn.closest(".nav-menu");
+        const nextMenu = document.querySelector(`.nav-menu[data-nav="${idNav}"]`);
 
         currentMenu.classList.remove("open");
         nextMenu.classList.add("open");

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  @@include('html/head.html',{ "title":"pauchoo0k" })
+  <body class="body">
+    @@include('html/components/header.html')
+    @@include('html/widgets/modal-connect.html')
+    @@include('html/widgets/modal-call.html')
+    <main>
+      
+      @@include('html/components/contacts-main.html')
+      <section class="section comfort comfort--decor">
+        <div class="container">
+          <div class="comfort__head">
+            <h2 class="title title-2">Комфортная <span>обстановка для вас</span></h2>
+            <div class="slider-nav">
+              <button class="btn slider-nav__btn slider-nav__btn--prev">
+                <svg class="slider-nav__arrow">
+                  <use xlink:href="img/icons/icons.svg#icon-arrow-clean"></use>
+                </svg>
+              </button>
+              <button class="btn slider-nav__btn slider-nav__btn--next">
+                <svg class="slider-nav__arrow">
+                  <use xlink:href="img/icons/icons.svg#icon-arrow-clean"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="swiper comfort__slider">
+            <div class="swiper-wrapper">
+              <a
+                href="@img/picture/comfort.jpg"
+                data-fancybox="comfort"
+                class="swiper-slide comfort__slide"
+              >
+                <img src="@img/picture/comfort.jpg" alt="image" class="comfort__slide-img" />
+              </a>
+              <a
+                href="@img/picture/comfort.jpg"
+                data-fancybox="comfort"
+                class="swiper-slide comfort__slide"
+              >
+                <img src="@img/picture/comfort.jpg" alt="image" class="comfort__slide-img" />
+              </a>
+              <a
+                href="@img/picture/comfort.jpg"
+                data-fancybox="comfort"
+                class="swiper-slide comfort__slide"
+              >
+                <img src="@img/picture/comfort.jpg" alt="image" class="comfort__slide-img" />
+              </a>
+              <a
+                href="@img/picture/comfort.jpg"
+                data-fancybox="comfort"
+                class="swiper-slide comfort__slide"
+              >
+                <img src="@img/picture/comfort.jpg" alt="image" class="comfort__slide-img" />
+              </a>
+              <a
+                href="@img/picture/comfort.jpg"
+                data-fancybox="comfort"
+                class="swiper-slide comfort__slide"
+              >
+                <img src="@img/picture/comfort.jpg" alt="image" class="comfort__slide-img" />
+              </a>
+              <a
+                href="@img/picture/comfort.jpg"
+                data-fancybox="comfort"
+                class="swiper-slide comfort__slide"
+              >
+                <img src="@img/picture/comfort.jpg" alt="image" class="comfort__slide-img" />
+              </a>
+              <a
+                href="@img/picture/comfort.jpg"
+                data-fancybox="comfort"
+                class="swiper-slide comfort__slide"
+              >
+                <img src="@img/picture/comfort.jpg" alt="image" class="comfort__slide-img" />
+              </a>
+            </div>
+          </div>
+          <div class="scrollbar comfort__scrollbar-wrapper">
+            <div class="scrollbar__item comfort__scrollbar"></div>
+          </div>
+        </div>
+      </section>
+      <section class="section connection _bottom">
+        <div class="container">
+          <div class="connection__body">
+            <img src="@img/decor/connection-decor.png" alt="lines" class="connection__decor" />
+            <div class="corner corner--left-bottom connection__corner">
+              <div class="corner__body corner__body--gray"></div>
+            </div>
+            <img src="@img/picture/doctor.png" alt="doctor" class="connection__doctor" />
+            <div class="connection__info">
+              <h2 class="title title-2 connection__title">Давайте пообщаемся</h2>
+              <p class="connection__content">И начнем создавать здоровую голивудскую улыбку</p>
+              <ul class="list social connection__social">
+                <li>
+                  <a href="#" class="social__btn">
+                    <div class="social__wrapper-icon">
+                      <img src="@img/wh.png" alt="whatsapp" class="social__icon" />
+                    </div>
+                    <div class="social__main">
+                      <span class="social__info-title">Спросите по</span>
+                      <span class="social__info-name">WhatsApp</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:89280388484" class="social__btn">
+                    <div class="social__wrapper-icon">
+                      <img src="@img/tel.svg" alt="tel" class="social__icon" />
+                    </div>
+                    <div class="social__main">
+                      <span class="social__info-title">Позвоните нам</span>
+                      <span class="social__info-name">8 (928) 038-84-84</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="connection__wrapper-form wrapper-form">
+              <h3 class="title title-3 connection__form-title">
+                Оставьте свои контактные данные и мы <span>вам перезвоним</span>
+              </h3>
+              <form action="#" class="connection__form">
+                <label for="name" class="connection__form-label">
+                  <input type="text" id="name" placeholder="Ваше имя" class="input" />
+                </label>
+                <label for="tel" class="connection__form-label">
+                  <input type="tel" id="tel" placeholder="Ваш телефон" class="input" />
+                </label>
+                <button class="btn btn-custom btn-custom--primary connection__form-btn">
+                  Записаться
+                </button>
+                <p class="policy-content">
+                  Нажимая на кнопку «Записаться» я даю согласие на обработку
+                  <a href="#">персональных данных</a>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+    @@include('html/components/footer.html')
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=b46e9249-4925-4460-b11c-3aaf76ad0115&lang=ru_RU" type="text/javascript"></script>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

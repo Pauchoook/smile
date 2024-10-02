@@ -1,5 +1,11 @@
 .connection {
   z-index: 10;
+  &._bottom {
+    padding-bottom: 90px;
+    @include tablet {
+      padding-bottom: 40px;
+    }
+  }
   &--app {
     padding: 90px 0px;
     border-radius: 0;
