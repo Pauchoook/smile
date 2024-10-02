@@ -139,8 +139,14 @@
   }
   &__title {
     max-width: 315px;
+    &--technology {
+      max-width: 380px;
+    }
     @include tablet {
       max-width: 190px;
+      &--technology {
+        max-width: 235px;
+      }
     }
   }
   &__item-img {
@@ -171,5 +177,11 @@
     width: fit-content;
     padding: 13px 28px;
     margin-top: 24px;
+  }
+  &__video-btn {
+    margin-top: 24px;
+    @include tablet {
+      margin-top: 16px;
+    }
   }
 }

@@ -1,6 +1,7 @@
 import * as functions from "./files/functions.js";
 
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
+import 'air-datepicker/air-datepicker.css';
 import "../scss/style.scss";
 import spoller from "./files/spoller.js";
 import sliders from "./files/sliders.js";
@@ -12,6 +13,10 @@ import beforeAfter from "./files/beforeAfter.js";
 import map from "./files/map.js";
 import more from "./files/more.js";
 import fancy from "./files/fancy.js";
+import changeFile from "./files/changeFile.js";
+import anchor from "./files/anchor.js";
+import date from "./files/date.js";
+import addClient from "./files/addClient.js";
 
 sliders();
 fancy();
@@ -25,3 +30,7 @@ select();
 beforeAfter();
 map();
 more();
+changeFile();
+anchor();
+date();
+addClient();

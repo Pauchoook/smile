@@ -1,0 +1,206 @@
+.info {
+  padding: 80px 0px 90px 0px;
+  overflow: hidden;
+  @include tablet {
+    padding-bottom: 40px;
+  }
+  .head {
+    &::before {
+      top: 50px;
+    }
+  }
+  &__parent {
+    &:not(:last-child) {
+      margin-bottom: 90px;
+    }
+    @include tablet {
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+  &__parent-title {
+    margin-bottom: 40px;
+    @include tablet {
+      margin-bottom: 24px;
+    }
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  &__item {
+    border-radius: 30px;
+    padding: 20px 24px;
+    background-color: white;
+    @include tablet {
+      padding: 16px;
+      border-radius: 20px;
+    }
+  }
+  &__item-btn {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+    &._spoller-active {
+      .btn-circle {
+        color: white;
+        background-color: var(--melrose);
+        transform: rotate(270deg);
+      }
+    }
+    @include hover {
+      .btn-circle {
+        color: white;
+        background-color: var(--melrose);
+      }
+    }
+    @include tablet {
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+  }
+  &__item-number {
+    display: block;
+    background-color: var(--chalk);
+    border-radius: 50px;
+    padding: 10px 30px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 125%;
+    color: var(--portage);
+    @include tablet {
+      font-size: 20px;
+      line-height: 130%;
+      padding: 8px 16px;
+    }
+  }
+  &__item-title {
+    flex: 1;
+    text-align: start;
+    @include tablet {
+      order: 3;
+      flex: 0 1 100%;
+    }
+  }
+  &__skill {
+    padding: 4px 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--orange);
+    background-color: var(--peach);
+    border-radius: 50px;
+    @include tablet {
+      order: 4;
+    }
+  }
+  &__item-circle {
+    transform: rotate(90deg);
+    @include tablet {
+      margin-left: auto;
+    }
+  }
+  &__spoller {
+    padding: 30px 0px 0px 120px;
+    @include tablet {
+      padding: 24px 0px 0px 0px;
+    }
+  }
+  &__spoller-item {
+    margin-bottom: 30px;
+    @include tablet {
+      margin-bottom: 24px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 16px;
+    @include tablet {
+      margin-top: 12px;
+      gap: 8px;
+    }
+  }
+  &__list-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 150%;
+    padding-left: 18px;
+    &--icon {
+      padding-left: 0;
+      gap: 8px;
+      span {
+        max-width: calc(100% - 44px);
+      }
+      &::before {
+        display: none;
+      }
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      width: 10px;
+      height: 10px;
+      border: 2px solid var(--orange);
+      border-radius: 50%;
+      left: 0;
+    }
+    @include tablet {
+      font-size: 14px;
+      line-height: 143%;
+      &--icon {
+        span {
+          max-width: calc(100% - 40px);
+        }
+      }
+    }
+  }
+  &__spoller-nav {
+    display: flex;
+    gap: 24px;
+    @include mobile {
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .btn {
+      padding-left: 28px;
+      padding-right: 28px;
+      @include mobile {
+        width: 100%;
+      }
+    }
+  }
+  &__spoller-content {
+    font-size: 16px;
+    line-height: 150%;
+    @include tablet {
+      font-size: 14px;
+      line-height: 143%;
+    }
+    strong {
+      font-weight: 500;
+    }
+    a {
+      font-weight: 600;
+      color: var(--orange);
+      @include hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  &__spoller-icon {
+    width: 36px;
+    height: 36px;
+    color: var(--orange);
+    @include tablet {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}

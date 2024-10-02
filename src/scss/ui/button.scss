@@ -49,6 +49,14 @@
       color: var(--portage);
     }
   }
+  &._red {
+    border-color: var(--red);
+    color: var(--red);
+    @include hover {
+      background-color: var(--red);
+      color: white;
+    }
+  }
 }
 .btn-circle {
   @include flex-center;
@@ -59,7 +67,8 @@
   color: var(--melrose);
   transition:
     background-color 0.2s ease,
-    color 0.2s ease;
+    color 0.2s ease,
+    transform 0.2s ease;
   @include hover {
     color: white;
     background-color: var(--melrose);
@@ -71,6 +80,7 @@
   &__arrow {
     width: 16px;
     height: 16px;
+    transform: translateX(1px);
     @include tablet {
       width: 14px;
       height: 14px;

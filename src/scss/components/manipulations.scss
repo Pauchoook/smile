@@ -1,0 +1,53 @@
+.manipulations {
+  padding-bottom: 90px;
+  @include tablet {
+    padding-bottom: 40px;
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    width: 2605px;
+    height: 740px;
+    right: 0;
+    bottom: -460px;
+    transform: rotate(135deg) scale(1, -1);
+    background: url("@img/decor/decor.svg") 0 0 / 100% 100% no-repeat;
+    z-index: -1;
+    @include tablet {
+      width: 1230px;
+      height: 300px;
+      bottom: -400px;
+    }
+  }
+  &__title {
+    margin-bottom: 30px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: white;
+    border-radius: 60px;
+    padding: 16px 25px 16px 40px;
+    @include tablet {
+      flex-wrap: wrap;
+      border-radius: 16px;
+      padding: 16px;
+      gap: 8px;
+      row-gap: 20px;
+    }
+  }
+  &__item-title {
+    flex: 1;
+    @include tablet {
+      flex: 0 1 calc(100%);
+      font-size: 18px;
+      line-height: 133%;
+    }
+  }
+}

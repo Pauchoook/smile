@@ -1,0 +1,19 @@
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 50px;
+  @include tablet {
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  &__btn {
+    display: block;
+    padding: 10px 30px;
+    @include tablet {
+      padding: 8px 22px;
+      font-size: 14px;
+      line-height: 143%;
+    }
+  }
+}

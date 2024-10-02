@@ -1,0 +1,72 @@
+.head {
+  position: relative;
+  padding: 40px 0px 90px 0px;
+  min-height: 240px;
+  z-index: 5;
+  @include tablet {
+    min-height: auto;
+    padding-bottom: 40px;
+  }
+  &__title {
+    margin-top: 30px;
+    @include tablet {
+      margin-top: 16px;
+    }
+  }
+  &__btn {
+    display: block;
+    width: fit-content;
+    text-align: center;
+    margin-top: 24px;
+    padding-left: 28px;
+    padding-right: 28px;
+    margin-top: 24px;
+    @include tablet {
+      margin-top: 16px;
+    }
+  }
+  &__content {
+    margin: 24px 0px 0px 0px;
+    max-width: 560px;
+    font-size: 16px;
+    line-height: 150%;
+    @include tablet {
+      font-size: 14px;
+      line-height: 143%;
+    }
+    a {
+      font-weight: 600;
+      line-height: 125%;
+      color: var(--orange);
+      @include hover {
+        text-decoration: underline;
+      }
+      @include tablet {
+        font-weight: 500;
+      }
+    }
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    background: url("@img/decor/decor.svg") 0 0 / 100% 100% no-repeat;
+    width: 1145px;
+    height: 270px;
+    top: -40px;
+    right: -75px;
+    z-index: -1;
+    @include tablet {
+      width: 620px;
+      height: 245px;
+      right: -300px;
+      top: -5px;
+    }
+  }
+  &__more {
+    max-width: 905px;
+    margin: 24px 0px;
+    @include tablet {
+      margin: 12px 0px;
+    }
+  }
+}

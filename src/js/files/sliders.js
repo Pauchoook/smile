@@ -171,7 +171,58 @@ export default function sliders() {
       breakpoints: {
         744: {
           slidesPerView: 3,
-        }
+        },
+      },
+    });
+  }
+
+  const discountSlider = document.querySelector(".discount__slider");
+
+  if (discountSlider) {
+    const swiper = new Swiper(discountSlider, {
+      modules: [Navigation, Autoplay],
+      speed: 700,
+      slidesPerView: "auto",
+      spaceBetween: 24,
+      grabCursor: true,
+      navigation: {
+        prevEl: ".discount .slider-nav__btn--prev",
+        nextEl: ".discount .slider-nav__btn--next",
+      },
+      autoplay: {
+        delay: 4000,
+      },
+    });
+
+    if (window.matchMedia("(max-width: 576px)").matches) {
+      swiper.destroy();
+    }
+  }
+
+  const comfortSlider = document.querySelector(".comfort__slider");
+
+  if (comfortSlider) {
+    const swiper = new Swiper(comfortSlider, {
+      modules: [Navigation, Autoplay, Scrollbar],
+      speed: 700,
+      slidesPerView: "auto",
+      spaceBetween: 24,
+      grabCursor: true,
+      navigation: {
+        prevEl: ".comfort .slider-nav__btn--prev",
+        nextEl: ".comfort .slider-nav__btn--next",
+      },
+      autoplay: {
+        delay: 4000,
+      },
+      scrollbar: {
+        el: ".comfort__scrollbar",
+        draggable: true,
+      },
+      breakpoints: {
+        744: {
+          slidesPerView: 3,
+        },
       },
     });
   }

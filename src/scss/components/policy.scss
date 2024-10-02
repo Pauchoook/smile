@@ -1,0 +1,7 @@
+.policy {
+  overflow: hidden;
+  padding: 90px 0px;
+  @include tablet {
+    padding-bottom: 40px;
+  }
+}

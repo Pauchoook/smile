@@ -30,6 +30,13 @@
 @import "./help/more";
 @import "./help/wrapper-section";
 @import "./help/doctor";
+@import "./help/nav";
+@import "./help/prices";
+@import "./help/stock-card";
+@import "./help/head";
+@import "./help/body-info";
+@import "./help/wrapper-content";
+@import "./help/date-picker";
 
 // mini-components
 @import "./mini-components/modal-connect";
@@ -58,5 +65,15 @@
 @import "./components/team";
 @import "./components/education";
 @import "./components/certificates";
+@import "./components/manipulations";
+@import "./components/discount";
+@import "./components/stocks";
+@import "./components/reviews-catalog";
+@import "./components/linear";
+@import "./components/leave-review";
+@import "./components/comfort";
+@import "./components/info";
+@import "./components/policy";
+@import "./components/tax";
 
 @import "./components/footer";

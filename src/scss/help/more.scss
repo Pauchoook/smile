@@ -15,4 +15,10 @@
 }
 .more {
   @include text-overflow(9);
+  &[data-lines="2"] {
+    -webkit-line-clamp: 2;
+    @include tablet {
+      -webkit-line-clamp: 3;
+    }
+  }
 }

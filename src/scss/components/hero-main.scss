@@ -5,7 +5,7 @@
   &::before {
     position: absolute;
     content: "";
-    bottom: 50px;
+    bottom: 130px;
     left: -300px;
     width: 2240px;
     height: 540px;
@@ -15,6 +15,14 @@
   &--doctor {
     .hero-main__main {
       background-image: none;
+    }
+  }
+  &--price {
+    .hero-main__main {
+      background-image: none;
+    }
+    &::before {
+      display: none;
     }
   }
   @include tablet {
@@ -96,6 +104,14 @@
       padding: 6px 16px;
     }
   }
+  &__term {
+    border-radius: 50px;
+    background-color: var(--alabaster);
+    padding: 6px 12px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 150%;
+  }
   &__title {
     margin-bottom: 24px;
     max-width: 540px;
@@ -120,10 +136,16 @@
     gap: 16px;
     padding-top: 20px;
     border-top: 1px solid var(--athens-gray);
+    &--price {
+      gap: 40px;
+    }
     @include tablet {
       gap: 12px;
       padding-top: 10px;
       margin-top: 16px;
+      &--price {
+        gap: 40px;
+      }
     }
   }
   &__footer-img {
@@ -153,21 +175,40 @@
       line-height: 143%;
     }
   }
-  &__middle {
-    flex: 1;
+  &__footer-price {
+    display: block;
+    font-weight: 500;
+    &--price {
+      color: var(--melrose);
+    }
+    &--term {
+      color: var(--orange);
+    }
     @include tablet {
-      flex: 0 1 100%;
+      font-size: 20px;
+      line-height: 130%;
+    }
+  }
+  &__middle {
+    max-width: 336px;
+    width: 100%;
+    @include tablet {
+      max-width: 100%;
+      &--price {
+        .hero-main__middle-info {
+          display: block;
+        }
+      }
     }
   }
   &__middle-img {
     display: block;
     width: 100%;
-    height: 260px;
+    height: auto;
     object-fit: cover;
     border-radius: 20px;
     margin-bottom: 30px;
     @include tablet {
-      height: 185px;
       max-width: 400px;
       width: 100%;
       margin: 0 auto;
@@ -178,14 +219,9 @@
     border-radius: 20px;
     padding: 20px;
     background-color: white;
-    @include hover {
-      .btn-circle {
-        background-color: var(--melrose);
-        color: white;
-      }
-    }
     @include tablet {
       display: none;
+      margin-top: 16px;
     }
   }
   &__middle-corner {
@@ -199,6 +235,26 @@
   &__middle-title {
     max-width: calc(100% - 50px);
     margin-bottom: 24px;
+  }
+  &__middle-content {
+    margin: 0;
+    font-size: 14px;
+    line-height: 143%;
+    max-width: 145px;
+    @include tablet {
+      font-size: 12px;
+      line-height: 150%;
+    }
+  }
+  &__middle-icon {
+    position: absolute;
+    width: 110px;
+    height: auto;
+    bottom: 8px;
+    right: 15px;
+    @include tablet {
+      width: 92px;
+    }
   }
   &__middle-rating {
     display: flex;

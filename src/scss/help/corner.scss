@@ -61,6 +61,23 @@
           right: -19px;
         }
       }
+      &--mini {
+        border-radius: 0 30px 0 30;
+        &::before {
+          bottom: -26px;
+        }
+        &::after {
+          right: -26px;
+        }
+        @include tablet {
+          &::before {
+            bottom: -14px;
+          }
+          &::after {
+            right: -14px;
+          }
+        }
+      }
     }
   }
   &--left-bottom {

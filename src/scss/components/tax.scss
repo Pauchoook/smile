@@ -1,0 +1,163 @@
+.tax {
+  overflow: hidden;
+  padding: 90px 0px;
+  @include tablet {
+    padding-bottom: 40px;
+  }
+  &__title {
+    margin-bottom: 60px;
+    @include tablet {
+      margin-bottom: 32px;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    @include tablet {
+      gap: 32px;
+    }
+  }
+  &__form-item {
+  }
+  &__form-title {
+    margin-bottom: 24px;
+    span {
+      color: var(--red);
+    }
+    @include tablet {
+      margin-bottom: 16px;
+    }
+  }
+  &__form-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    @include tablet {
+      gap: 12px;
+    }
+    &--check {
+      gap: 40px;
+      row-gap: 15px;
+      @include tablet {
+        gap: 16px;
+        row-gap: 12px;
+      }
+    }
+  }
+  &__form-cell {
+    position: relative;
+    flex: 1;
+    @include tablet {
+      flex: 0 1 calc(50% - 6px);
+    }
+    @include tablet-min {
+      flex-basis: 100%;
+    }
+    &--full {
+      flex: 0 1 100%;
+    }
+    &--check {
+      flex: none;
+    }
+    &--half {
+      flex: 0 1 calc(50% - 8px);
+      @include tablet-min {
+        flex-basis: 100%;
+      }
+    }
+    &--flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      row-gap: 0px;
+    }
+  }
+  &__item-title {
+    display: block;
+    font-size: 16px;
+    line-height: 150%;
+    margin-bottom: 8px;
+    width: 100%;
+    span {
+      color: var(--red);
+    }
+  }
+  &__item-subcontent {
+    display: block;
+    font-size: 14px;
+    line-height: 157%;
+    letter-spacing: 0.02em;
+    color: var(--manatee);
+    margin-top: 8px;
+  }
+  &__form-content {
+    font-size: 16px;
+    line-height: 150%;
+    margin: 0px 0px 24px 0px;
+    max-width: 580px;
+    @include tablet {
+      font-size: 14px;
+      line-height: 143%;
+    }
+  }
+  &__client-title {
+    font-size: 18px;
+    line-height: 133%;
+    margin-bottom: 16px;
+    @include tablet {
+      font-size: 16px;
+      line-height: 150%;
+      margin-bottom: 14px;
+    }
+  }
+  &__client-nav {
+    display: flex;
+    justify-content: end;
+    gap: 16px;
+    flex: 0 1 100%;
+    margin-top: 16px;
+    @include mobile {
+    }
+    .btn {
+      padding-left: 24px;
+      padding-right: 24px;
+      @include tablet {
+        font-size: 14px;
+        line-height: 114%;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+  }
+  &__end-content {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 133%;
+    text-align: center;
+    margin: 0px 0px 24px 0px;
+    @include tablet {
+      font-size: 16px;
+      line-height: 150%;
+      margin-bottom: 16px;
+    }
+  }
+  &__btn {
+    width: 100%;
+    padding: 25px;
+    font-size: 18px;
+    line-height: 111%;
+    @include tablet {
+      font-size: 16px;
+      line-height: 125%;
+      padding: 18px;
+    }
+  }
+  &__policy {
+    text-align: center;
+    margin-top: 24px;
+    @include tablet {
+      margin-top: 16px;
+    }
+  }
+}

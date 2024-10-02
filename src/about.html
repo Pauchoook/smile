@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+  @@include('html/head.html',{ "title":"pauchoo0k" })
+  <body class="body">
+    @@include('html/components/header.html') @@include('html/widgets/modal-connect.html')
+    @@include('html/widgets/modal-call.html')
+    <main>
+      @@include('html/components/hero-about.html')
+      <div class="wrapper-section">
+        <section class="section trust">
+          <div class="container">
+            <h2 class="title title-2 trust__title">Нам доверили уже <span>1 235 пациента</span></h2>
+            <ul class="list trust__list">
+              <li class="trust__item trust__item--gray">
+                <div class="corner corner--left-bottom trust__item-number">
+                  <div class="corner__body corner__body--mini">
+                    <span>01</span>
+                  </div>
+                </div>
+                <h3 class="title title-3 trust__item-title">Честные цены, без хитрых уловок</h3>
+                <p class="trust__content">
+                  По телефону отвечает человек, а не бездушный робот. Быстро реагируем
+                  в мессенджерах
+                </p>
+              </li>
+              <li class="trust__item trust__item--gray">
+                <div class="corner corner--left-bottom trust__item-number">
+                  <div class="corner__body corner__body--mini">
+                    <span>01</span>
+                  </div>
+                </div>
+                <h3 class="title title-3 trust__item-title">Честные цены, без хитрых уловок</h3>
+                <p class="trust__content">
+                  По телефону отвечает человек, а не бездушный робот. Быстро реагируем
+                  в мессенджерах
+                </p>
+              </li>
+              <li class="trust__item trust__item--gray">
+                <div class="corner corner--left-bottom trust__item-number">
+                  <div class="corner__body corner__body--mini">
+                    <span>01</span>
+                  </div>
+                </div>
+                <h3 class="title title-3 trust__item-title">Честные цены, без хитрых уловок</h3>
+                <p class="trust__content">
+                  По телефону отвечает человек, а не бездушный робот. Быстро реагируем
+                  в мессенджерах
+                </p>
+              </li>
+              <li class="trust__item trust__item--gray">
+                <div class="corner corner--left-bottom trust__item-number">
+                  <div class="corner__body corner__body--mini">
+                    <span>01</span>
+                  </div>
+                </div>
+                <h3 class="title title-3 trust__item-title">Честные цены, без хитрых уловок</h3>
+                <p class="trust__content">
+                  По телефону отвечает человек, а не бездушный робот. Быстро реагируем
+                  в мессенджерах
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+        @@include('html/components/article.html')
+      </div>
+      @@include('html/components/rating.html') @@include('html/components/certificates.html')
+      @@include('html/components/reviews.html')
+      <section class="section advantages">
+        <div class="container">
+          <div class="advantages__body">
+            <div class="advantages__item">
+              <div class="corner corner--right-bottom advantages__head">
+                <div class="corner__body">
+                  <h2 class="title title-2 advantages__title advantages__title--technology"><span>Новые</span> технологии и методы</h2>
+                </div>
+              </div>
+              <img src="@img/picture/new-technology.jpg" alt="image" class="advantages__item-img" />
+              <div class="advantages__item-info">
+                <h3 class="title title-3 advantages__item-title">Профессиональная команда</h3>
+                <p class="advantages__item-content">
+                  В клинике собраны специалисты всех направлений. Слаженная работа врач-ассистент
+                  обеспечивает скорость процесса.
+                </p>
+                <a href="https://www.youtube.com/watch?v=yEPukn2rS28" data-fancybox="about" class="social__btn advantages__video-btn">
+                  <div class="social__wrapper-icon">
+                    <img src="@img/krug.png" alt="krug" class="social__icon" />
+                  </div>
+                  <div class="social__main">
+                    <span class="social__info-title">Посмотрите</span>
+                    <span class="social__info-name">Видео о клинике</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="advantages__item">
+              <img src="@img/picture/advantages-2.jpg" alt="image" class="advantages__item-img" />
+              <div class="advantages__item-info">
+                <h3 class="title title-3 advantages__item-title">Современное оборудование</h3>
+                <p class="advantages__item-content">
+                  В клинике мы используем самое современное оборудование, которое отвечает всем
+                  международным стандартам.
+                </p>
+              </div>
+            </div>
+            <div class="advantages__item">
+              <img src="@img/picture/advantages-3.png" alt="image" class="advantages__item-img" />
+              <div class="advantages__item-info">
+                <h3 class="title title-3 advantages__item-title">Безопастность</h3>
+                <p class="advantages__item-content">
+                  Мы используем 3-х ступенчатая обработка инструментов согласно СанПин использование
+                  немецких автоклавов последнего поколения Melag.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      @@include('html/components/comfort.html')
+      @@include('html/components/our-doctors.html')
+      @@include('html/components/consultation.html')
+    </main>
+    @@include('html/components/footer.html')
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=b46e9249-4925-4460-b11c-3aaf76ad0115&lang=ru_RU"
+      type="text/javascript"
+    ></script>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

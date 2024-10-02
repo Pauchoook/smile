@@ -1,0 +1,40 @@
+.body-info {
+  position: relative;
+  padding: 100px 160px 120px 160px;
+  border-radius: 30px;
+  background-color: white;
+  z-index: 10;
+  @include laptop {
+    padding: 80px 30px;
+  }
+  @include tablet {
+    padding: 60px 16px;
+  }
+  &__corner {
+    position: absolute;
+    &--right {
+      top: 0;
+      right: 0;
+    }
+    &--left {
+      left: 0;
+      bottom: 0;
+    }
+    @include tablet {
+      &--right {
+        border-radius: 0 0 0 20px;
+      }
+      &--let {
+        border-radius: 0 20px 0 0;
+      }
+    }
+    .corner__body {
+      width: 200px;
+      height: 60px;
+      @include tablet {
+        width: 133px;
+        height: 40px;
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.comfort {
+  overflow: hidden;
+  padding: 90px 0px;
+  @include tablet {
+    padding: 40px 0px;
+  }
+  &__head {
+    @include flex-between;
+    margin-bottom: 50px;
+    @include tablet {
+      margin-bottom: 24px;
+    }
+    @include tablet-min {
+      .slider-nav {
+        display: none;
+      }
+    }
+  }
+  &__slider {
+    overflow: visible !important;
+  }
+  &__slide {
+    overflow: hidden;
+    display: block;
+    border-radius: 12px;
+    width: 455px !important;
+    height: 320px !important;
+    @include tablet-min {
+      width: 310px !important;
+      height: 220px !important;
+    }
+  }
+  &__slide-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__scrollbar-wrapper {
+    display: none;
+    margin-top: 24px;
+    @include tablet-min {
+      display: block;
+    }
+  }
+}

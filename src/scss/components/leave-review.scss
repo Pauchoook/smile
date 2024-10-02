@@ -1,0 +1,59 @@
+.leave-review {
+  &__title {
+    max-width: 350px;
+    margin-bottom: 20px;
+    @include tablet {
+      max-width: 185px;
+      margin-bottom: 16px;
+    }
+  }
+  &__rating {
+    justify-content: start;
+    flex: 0 1 100%;
+    margin-bottom: 20px;
+    @include tablet {
+      margin-bottom: 16px;
+    }
+    .star-rating__icon {
+      width: 32px;
+      height: 32px;
+      @include tablet {
+        width: 26px;
+        height: 26px;
+      }
+    }
+  }
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  &__label {
+    position: relative;
+    flex: 0 1 calc(50% - 6px);
+    @include tablet {
+      flex-basis: 100%;
+    }
+    &--message {
+      flex-basis: 100%;
+    }
+    &--file {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__icon-file {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    color: var(--melrose);
+    right: 12px;
+  }
+  &__btn {
+    flex: 0 1 calc(50% - 6px);
+    @include tablet {
+      flex-basis: 100%;
+    }
+  }
+}

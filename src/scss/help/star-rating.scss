@@ -32,6 +32,19 @@
     }
   }
 
+  &__input {
+    display: none;
+    &:checked + label, &:checked + label ~ label {
+      .star-rating__icon {
+        color: var(--orange);
+      }
+    }
+  }
+  &__label {
+    display: block;
+    cursor: pointer;
+  }
+
   &__icon {
     width: 24px;
     height: 24px;

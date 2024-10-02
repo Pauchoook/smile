@@ -14,6 +14,7 @@
   }
 }
 .input {
+  display: block;
   border-radius: 40px;
   border: 1px solid var(--athens-gray);
   background-color: var(--alabaster);
@@ -23,6 +24,38 @@
   font-size: 16px;
   line-height: 150%;
   outline: none;
+  &[type="number"] {
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+  &[type="date"] {
+    cursor: pointer;
+    &::-webkit-calendar-picker-indicator {
+      display: none;
+    }
+  }
+  &--textarea {
+    height: 115px;
+    resize: none;
+    border-radius: 20px;
+    &::-webkit-scrollbar {
+      width: 4px;
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      width: 4px;
+      background-color: var(--athens-gray);
+      border-radius: 50px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+  }
   &.error {
     border-color: var(--red);
   }
@@ -30,6 +63,53 @@
     color: inherit;
     font-size: inherit;
   }
+}
+.input-disable {
+  pointer-events: none;
+}
+.input-check {
+  display: none;
+  &:checked + label {
+    &::before {
+      background: url("@img/check-line.png") center center / 12px auto no-repeat;
+      background-color: var(--melrose);
+      border-color: var(--melrose);
+      box-shadow: 0 2px 4px 0 rgba(46, 38, 61, 0.16);
+    }
+  }
+}
+.label-check {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--gun-powder);
+  padding-left: 27px;
+  white-space: nowrap;
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    border: 2px solid var(--manatee);
+  }
+}
+.input-check-value {
+  position: relative;
+}
+.input-file {
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 .policy-content {
   font-size: 12px;
@@ -43,9 +123,6 @@
     }
   }
 }
-.input-disable {
-  pointer-events: none;
-}
 .form-error {
   display: block;
   font-size: 14px;
@@ -55,4 +132,19 @@
   color: var(--red);
   width: 100%;
   margin-top: 4px;
+}
+.icon-arrow {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  width: 16px;
+  height: 16px;
+  color: var(--hint);
+}
+.file-value {
+  display: block;
+  width: 220px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

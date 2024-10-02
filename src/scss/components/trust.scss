@@ -31,6 +31,9 @@
     flex: 0 1 calc(25% - 18px);
     gap: 15px;
     min-height: 240px;
+    &--gray {
+      background-color: var(--alabaster);
+    }
     @include desktop-min {
       padding: 20px;
       flex-basis: calc(25% - 15px);
