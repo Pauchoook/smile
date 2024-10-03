@@ -1,0 +1,84 @@
+.requisites {
+  padding-bottom: 90px;
+  @include tablet {
+    padding-bottom: 40px;
+  }
+  &__body {
+    position: relative;
+    padding: 60px;
+    border-radius: 30px;
+    background-color: white;
+    @include tablet {
+      border-radius: 20px;
+      padding: 20px 20px 24px 20px;
+    }
+  }
+  &__corner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    .corner__body {
+      width: 360px;
+      height: 75px;
+      @include tablet {
+        width: 120px;
+        height: 40px;
+        border-radius: 0 0 0 20px;
+      }
+    }
+  }
+  &__title {
+    margin-bottom: 40px;
+    @include tablet {
+      margin-bottom: 16px;
+      max-width: 185px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    @include desktop-min {
+      gap: 12px;
+    }
+  }
+  &__list {
+    flex: 0 1 calc(50% - 28px);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    @include desktop-min {
+      flex-basis: 100%;
+    }
+  }
+  &__item {
+    display: flex;
+    gap: 40px;
+    @include tablet {
+      flex-wrap: wrap;
+      gap: 0px;
+    }
+  }
+  &__item-title {
+    font-size: 16px;
+    line-height: 150%;
+    flex: 0 1 195px;
+    color: var(--manatee);
+    @include tablet {
+      flex-basis: 100%;
+      font-size: 14px;
+      line-height: 143%;
+    }
+  }
+  &__item-content {
+    flex: 1;
+    font-size: 18px;
+    line-height: 133%;
+    color: var(--gun-powder);
+    @include tablet {
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+}
