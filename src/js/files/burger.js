@@ -15,6 +15,7 @@ export default function burger() {
         socialHeader.classList.add("open");
         navHeader.classList.add("show");
         navWrapperFirst.classList.add("open");
+        document.body.classList.add("body-hidden");
 
         document.body.addEventListener("click", handleClose);
       } else {
@@ -28,6 +29,8 @@ export default function burger() {
       socialHeader.classList.remove("open");
       navHeader.classList.remove("show");
       navWrapperFirst.classList.remove("open");
+      document.body.classList.remove("body-hidden");
+      document.querySelectorAll(".nav-menu").forEach(menu => menu.classList.remove("open"));
 
       return document.body.removeEventListener("click", handleClose);
     }

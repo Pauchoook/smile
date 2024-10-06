@@ -17,6 +17,7 @@ import changeFile from "./files/changeFile.js";
 import anchor from "./files/anchor.js";
 import date from "./files/date.js";
 import addClient from "./files/addClient.js";
+import fixedMenu from "./files/fixedMenu.js";
 
 sliders();
 fancy();
@@ -34,3 +35,4 @@ changeFile();
 anchor();
 date();
 addClient();
+fixedMenu();

@@ -46,10 +46,13 @@
     }
   }
   &__title {
-    flex: 1;
+    flex: 0 0 260px;
     transition: color .2s ease;
+    @include desktop-min {
+      flex-basis: 180px;
+    }
     @include laptop {
-      flex: 0 1 calc(100% - 165px);
+      flex-basis: calc(100% - 165px);
     }
   }
   &__img {
@@ -70,14 +73,14 @@
     font-size: 16px;
     line-height: 150%;
     margin: 0;
-    flex: 0 1 524px;
+    // flex: 0 1 524px;
     @include desktop-min {
-      flex-basis: 415px;
+      // flex-basis: 415px;
     }
     @include tablet {
       font-size: 14px;
       line-height: 143%;
-      flex-basis: 100%;
+      // flex-basis: 100%;
     }
   }
   &__nav {
@@ -86,6 +89,7 @@
     gap: 16px;
     background: url("@img/elements/oval-inside-violet.svg") center right 63px / 21px 26px
       no-repeat;
+      white-space: nowrap;
     @include tablet {
       background-size: 20px 21px;
       background-position: center right 49px;
@@ -96,7 +100,6 @@
     padding: 8px 25px;
     border-radius: 50px;
     background-color: var(--chalk);
-    max-width: 175px;
     @include desktop-min {
       padding-right: 25px;
       padding-left: 25px;

@@ -45,6 +45,10 @@
       min-height: 375px;
       padding: 20px;
       flex-basis: calc(50% - 6px);
+      border-radius: 20px;
+      &:first-child {
+        border-radius: 0 20px 20px 20px;
+      }
       .advantages__item-img {
         bottom: -80px;
       }

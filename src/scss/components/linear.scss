@@ -103,6 +103,7 @@
     inset: 22px;
     font-size: 18px;
     fill: var(--orange);
+    animation: rotate 5s linear infinite;
     path {
       fill: none;
     }
@@ -240,5 +241,13 @@
       top: -15px;
       max-width: none;
     }
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

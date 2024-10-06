@@ -35,6 +35,9 @@
       transform: rotate(145deg);
     }
   }
+  .breadcrumbs {
+    flex: 1;
+  }
   &__container {
     display: flex;
     gap: 30px;

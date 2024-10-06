@@ -1,6 +1,9 @@
 .hero {
   padding: 125px 0px 150px 0px;
   background-color: white;
+  @include laptop-min {
+    padding-bottom: 90px;
+  }
   @include tablet {
     padding: 90px 0px 40px 0px;
   }
@@ -197,7 +200,7 @@
     }
     @include laptop-min {
       position: static;
-      margin: 24px auto 0px auto;
+      margin-top: 24px;
       max-width: 350px;
       .corner__body {
         padding: 0;

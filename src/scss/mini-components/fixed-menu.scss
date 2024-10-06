@@ -1,0 +1,140 @@
+.fixed-menu {
+  @include tablet {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 14px 12px 20px 12px;
+    box-shadow: 0 -4px 10px 0 rgba(205, 200, 211, 0.29);
+    background-color: white;
+    z-index: 30;
+  }
+  &__social {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50px;
+    padding: 10px 10px 16px 10px;
+    background-color: var(--alabaster);
+    z-index: 20;
+    @include tablet {
+      padding: 0;
+      background-color: transparent;
+      justify-content: center;
+      flex-direction: row;
+      bottom: 0;
+      left: 50%;
+      top: auto;
+      transform: translateX(-50%);
+      gap: 14px;
+      visibility: hidden;
+      opacity: 0;
+      transition:
+        bottom 0.4s ease-in-out,
+        opacity 0.4s ease-in-out,
+        visibility 0.4s ease-in-out;
+      z-index: -1;
+      &.open {
+        bottom: 112px;
+        z-index: 20;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+  &__social-btn {
+    display: block;
+    width: 36px;
+    height: 36px;
+    transition: transform 0.2s ease;
+    @include hover {
+      transform: scale(1.13);
+    }
+    @include tablet {
+      width: 52px;
+      height: 52px;
+      &:nth-child(2) {
+        transform: translateY(-20px);
+      }
+    }
+  }
+  &__social-icon {
+    width: 100%;
+    height: 100%;
+  }
+  &__social-btn-modal {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 125%;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg) translateX(3px);
+    color: var(--orange);
+    transition: color 0.2s ease;
+    @include hover {
+      color: var(--melrose);
+    }
+    @include tablet {
+      display: none;
+    }
+  }
+  &__list {
+    display: none;
+    justify-content: center;
+    width: 100%;
+    @include tablet {
+      display: flex;
+    }
+  }
+  &__item {
+    flex: 0 1 70px;
+  }
+  &__btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 133%;
+    color: var(--gun-powder);
+    transition: color 0.2s ease;
+    &.active {
+      color: var(--portage);
+    }
+    @include hover {
+      color: var(--portage);
+    }
+  }
+  &__icon {
+    width: 25px;
+    height: 24px;
+  }
+  &__btn-open {
+    @include flex-center;
+    border: 4px solid white;
+    background-color: var(--melrose);
+    border-radius: 50%;
+    color: white;
+    width: 52px;
+    height: 52px;
+    transform: translateY(-25px);
+    margin: 0 auto;
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease;
+    &.active {
+      background-color: var(--portage);
+    }
+    @include hover {
+      background-color: var(--portage);
+    }
+  }
+  &__icon-tel {
+    width: 22px;
+    height: 22px;
+  }
+}

@@ -10,7 +10,47 @@
       @@include('html/components/hero-main.html', {"title": "Услуги <span>нашей клиники</span>"})
       @@include('html/components/services-gallery.html')
       @@include('html/components/rating.html')
-      @@include('html/components/connection-app.html')
+      <section class="section connection connection--app _clean-padding">
+        <div class="container">
+          <div class="connection__body">
+            <img src="@img/decor/connection-decor.png" alt="lines" class="connection__decor" />
+            <div class="corner corner--left-bottom connection__corner">
+              <div class="corner__body corner__body--gray"></div>
+            </div>
+            <span class="connection__percent">%</span>
+            <span class="connection__discount">Ничего себе <br> СКИДКА!!!</span>
+            <img src="@img/picture/women-tel.png" alt="women" class="connection__women" />
+            <div class="connection__info">
+              <h2 class="title title-2 connection__title">Запишитесь на прием</h2>
+              <p class="connection__content">
+                Наша клиника обеспечивает высокий уровень стоматологических услуг, предлагает комплексные
+                решения для лечения любых стоматологических заболеваний.
+              </p>
+            </div>
+            <div class="connection__wrapper-form wrapper-form">
+              <h3 class="title title-3 connection__form-title">
+                Мы перезвоним и подберём для вас удобное <span>время приёма</span>
+              </h3>
+              <form action="#" class="connection__form">
+                <label for="name-app" class="connection__form-label">
+                  <input type="text" id="name-app" placeholder="Ваше имя" class="input" />
+                </label>
+                <label for="tel-app" class="connection__form-label">
+                  <input type="tel" id="tel-app" placeholder="Ваш телефон" class="input" />
+                </label>
+                <button class="btn btn-custom btn-custom--primary connection__form-btn">
+                  Записаться
+                </button>
+                <p class="policy-content">
+                  Нажимая на кнопку «Записаться» я даю согласие на обработку
+                  <a href="#">персональных данных</a>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       @@include('html/components/about-service.html')
       @@include('html/components/consultation.html')
 

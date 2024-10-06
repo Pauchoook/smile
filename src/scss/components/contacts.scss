@@ -41,6 +41,9 @@
     width: 100%;
     border-radius: 30px;
     background-color: var(--alabaster);
+    @include tablet {
+      border-radius: 20px;
+    }
   }
   &__logo {
     width: 177px;
@@ -51,6 +54,9 @@
     width: 100%;
     flex: 0 1 calc(50% - 12px);
     padding: 30px 25px;
+    @include tablet {
+      border-radius: 20px;
+    }
   }
   &__content {
     font-weight: 500;
@@ -91,6 +97,7 @@
       padding: 20px;
       flex-basis: 100%;
       min-height: auto;
+      border-radius: 20px;
       &::before {
         right: 130px;
         filter: blur(45px);
@@ -149,6 +156,7 @@
     @include tablet {
       gap: 16px;
       padding: 20px;
+      border-radius: 20px;
     }
   }
   &__item {
@@ -205,6 +213,7 @@
     }
     @include tablet {
       height: 250px;
+      border-radius: 20px;
     }
     @include mobile {
       height: 180px;

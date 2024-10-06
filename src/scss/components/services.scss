@@ -113,7 +113,12 @@
     }
   }
   &__title {
+    display: block;
     margin-bottom: 15px;
+    transition: color .2s ease;
+    @include hover {
+      color: var(--melrose);
+    }
     @include mobile {
       margin-bottom: 0;
     }

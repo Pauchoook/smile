@@ -7,23 +7,28 @@
     }
   }
   &--app {
-    padding: 90px 0px;
+    padding: 0px 0px 90px 0px;
     border-radius: 0;
     background-color: transparent;
+    .connection__content {
+      margin-bottom: 0;
+    }
     @include tablet {
-      padding-top: 60px;
       .connection__content {
         max-width: 210px;
       }
     }
     @include tablet {
-      padding: 40px 0px;
+      padding-bottom: 40px;
     }
     @include mobile {
       .connection__form-title {
         max-width: 240px;
       }
     }
+  }
+  &._clean-padding {
+    padding: 0;
   }
   &__body {
     position: relative;
@@ -42,6 +47,7 @@
     @include tablet {
       gap: 30px;
       padding: 20px;
+      border-radius: 20px;
     }
     @include mobile {
       padding: 16px;

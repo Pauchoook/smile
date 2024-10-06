@@ -229,6 +229,12 @@
       position: static;
       margin: 40px auto 0px auto;
     }
+    @include tablet {
+      border-radius: 20px;
+    }
+    @include mobile {
+      margin-top: 24px;
+    }
   }
   &__offer-body {
     position: relative;
