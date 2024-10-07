@@ -3,6 +3,7 @@
   z-index: 5;
   &--clean {
     padding-top: 0;
+    z-index: 10;
     &::before {
       display: none;
     }
@@ -15,12 +16,15 @@
     right: 0;
     bottom: -145px;
     transform: rotate(-40deg);
-    background: url(../img/decor/decor.png) 0 0 / cover no-repeat;
+    background: url("../img/decor/decor.svg") 0 0 / cover no-repeat;
     z-index: -1;
   }
   @include tablet {
     padding: 40px 0px;
     border-radius: 0 0 30px 30px;
+    &--clean {
+      padding: 0;
+    }
     &::before {
       width: 1065px;
       height: 175px;

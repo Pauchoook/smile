@@ -1,5 +1,5 @@
 .team {
-  padding: 120px 0px 90px 0px;
+  padding-top: 120px;
   &::before,
   &::after {
     position: absolute;
@@ -22,7 +22,6 @@
     transform: rotate(23deg);
   }
   @include tablet {
-    padding: 90px 0px 40px 0px;
     overflow: hidden;
     &::before {
       width: 620px;

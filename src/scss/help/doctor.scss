@@ -7,9 +7,6 @@
   border-radius: 30px;
   padding: 24px;
   background-color: white;
-  .title {
-    flex: 1;
-  }
   @include laptop-min {
     padding: 20px;
     width: 310px !important;
@@ -76,6 +73,7 @@
     margin: 8px 0px 20px 0px;
     font-size: 14px;
     line-height: 143%;
+    flex: 1;
     color: var(--manatee);
   }
   &__btn {

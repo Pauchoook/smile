@@ -1,18 +1,12 @@
 .reviews-catalog {
-  padding: 90px 0px 90px 0px;
+  padding-top: 90px;
   overflow: hidden;
-  @include tablet {
-    padding-bottom: 40px;
-  }
   &__nav {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    margin: 90px 0px 40px 0px;
+    margin-bottom: 40px;
     gap: 16px;
-    @include tablet {
-      margin-top: 40px;
-    }
     .nav {
       margin: 0;
     }

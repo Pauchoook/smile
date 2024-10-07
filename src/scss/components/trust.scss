@@ -3,6 +3,31 @@
   @include tablet {
     padding: 40px 0px;
   }
+  &--decor {
+    @include tablet {
+      overflow: hidden;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      background: url("@img/decor/decor.svg") 0 0 / 100% 100% no-repeat;
+      width: 2235px;
+      height: 540px;
+      top: 240px;
+      right: 40px;
+      transform: rotate(-14deg);
+      z-index: -1;
+      @include tablet {
+        width: 1230px;
+        height: 300px;
+        transform: rotate(-104deg);
+        top: 300px;
+        right: -245px;
+        top: auto;
+        bottom: 160px;
+      }
+    }
+  }
   &__title {
     margin-bottom: 40px;
     @include tablet {
@@ -83,5 +108,6 @@
   &__content {
     font-size: 14px;
     line-height: 143%;
+    margin: 0;
   }
 }

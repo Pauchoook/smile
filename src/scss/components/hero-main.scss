@@ -108,12 +108,17 @@
     }
   }
   &__term {
+    display: block;
+    width: fit-content;
     border-radius: 50px;
     background-color: var(--alabaster);
     padding: 6px 12px;
     font-weight: 500;
     font-size: 12px;
     line-height: 150%;
+    @include tablet {
+      margin-top: 12px;
+    }
   }
   &__title {
     margin-bottom: 24px;
@@ -141,6 +146,7 @@
     border-top: 1px solid var(--athens-gray);
     &--price {
       gap: 40px;
+      flex-wrap: wrap;
     }
     @include tablet {
       gap: 12px;
@@ -238,6 +244,9 @@
   &__middle-title {
     max-width: calc(100% - 50px);
     margin-bottom: 24px;
+    @include tablet {
+      margin-bottom: 8px;
+    }
   }
   &__middle-content {
     margin: 0;

@@ -1,8 +1,8 @@
 .contacts-main {
   overflow: hidden;
-  padding: 90px 0px;
+  padding-top: 90px;
   @include tablet {
-    padding-bottom: 40px;
+    padding-top: 40px;
   }
   &__body {
     display: flex;

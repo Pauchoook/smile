@@ -14,13 +14,38 @@
     top: 0;
     right: 50px;
     transform: rotate(-22deg);
-    background: url("@img/decor/decor.svg") 0 0 / cover no-repeat;
+    background: url("@img/decor/decor.svg") 0 0 / 100% 100% no-repeat;
     z-index: -1;
   }
   @include tablet {
     padding: 40px 0px;
     &::before {
       display: none;
+    }
+  }
+  &--rotate {
+    z-index: 5;
+    @include tablet-min {
+      overflow: hidden;
+    }
+    &::before {
+      width: 3000px;
+      height: 600px;
+      bottom: 0;
+      right: -499px;
+      top: auto;
+      transform: rotate(61deg);
+      @include tablet {
+        width: 1230px;
+        height: 300px;
+        bottom: 30px;
+        transform: rotate(72deg);
+        right: -270px;
+        display: block;
+      }
+      @include tablet-min {
+        right: -315px;
+      }
     }
   }
   &__title {

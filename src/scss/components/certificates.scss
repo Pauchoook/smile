@@ -3,6 +3,9 @@
   @include tablet {
     padding: 40px 0px;
   }
+  @include tablet-min {
+    overflow: hidden
+  }
   &__head {
     @include flex-between;
     margin-bottom: 50px;
@@ -13,6 +16,13 @@
       .slider-nav {
         display: none;
       }
+    }
+  }
+  &__slider {
+    @include tablet-min {
+      overflow: visible !important;
+      margin: 0 -15px;
+      padding: 0 15px;
     }
   }
   &__slide {

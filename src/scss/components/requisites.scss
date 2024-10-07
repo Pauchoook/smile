@@ -55,6 +55,11 @@
   &__item {
     display: flex;
     gap: 40px;
+    a {
+      @include hover {
+        color: var(--melrose);
+      }
+    }
     @include tablet {
       flex-wrap: wrap;
       gap: 0px;
@@ -76,6 +81,7 @@
     font-size: 18px;
     line-height: 133%;
     color: var(--gun-powder);
+    transition: color .2s ease;
     @include tablet {
       font-size: 16px;
       line-height: 150%;

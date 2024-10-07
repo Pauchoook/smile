@@ -8,6 +8,8 @@
     margin-bottom: 60px;
     @include tablet {
       margin-bottom: 32px;
+      font-size: 20px;
+      line-height: 130%;
     }
   }
   &__form {
