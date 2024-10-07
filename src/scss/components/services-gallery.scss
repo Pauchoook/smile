@@ -79,7 +79,12 @@
   &__info-item {
   }
   &__item-title {
+    display: block;
     margin-bottom: 16px;
+    transition: color .2s ease;
+    @include hover {
+      color: var(--melrose);
+    }
   }
   &__item-list {
     display: flex;

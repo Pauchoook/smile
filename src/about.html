@@ -64,7 +64,54 @@
         </section>
         @@include('html/components/article.html')
       </div>
-      @@include('html/components/rating.html') @@include('html/components/certificates.html')
+      @@include('html/components/rating.html') 
+      <section class="section certificates certificates--bottom-padding">
+        <div class="container">
+          <div class="certificates__head">
+            <h2 class="title title-2 certificates__title">Сертификаты</h2>
+            <div class="slider-nav">
+              <button class="btn slider-nav__btn slider-nav__btn--prev">
+                <svg class="slider-nav__arrow">
+                  <use xlink:href='img/icons/icons.svg#icon-arrow-clean'></use>
+                </svg>
+              </button>
+              <button class="btn slider-nav__btn slider-nav__btn--next">
+                <svg class="slider-nav__arrow">
+                  <use xlink:href='img/icons/icons.svg#icon-arrow-clean'></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="swiper certificates__slider">
+            <div class="swiper-wrapper">
+              <a href="@img/picture/certificate.jpg" data-fancybox="certificates" class="swiper-slide certificates__slide">
+                <img src="@img/picture/certificate.jpg" alt="certificate" class="certificates__img">
+              </a>
+              <a href="@img/picture/certificate.jpg" data-fancybox="certificates" class="swiper-slide certificates__slide">
+                <img src="@img/picture/certificate.jpg" alt="certificate" class="certificates__img">
+              </a>
+              <a href="@img/picture/certificate.jpg" data-fancybox="certificates" class="swiper-slide certificates__slide">
+                <img src="@img/picture/certificate.jpg" alt="certificate" class="certificates__img">
+              </a>
+              <a href="@img/picture/certificate.jpg" data-fancybox="certificates" class="swiper-slide certificates__slide">
+                <img src="@img/picture/certificate.jpg" alt="certificate" class="certificates__img">
+              </a>
+              <a href="@img/picture/certificate.jpg" data-fancybox="certificates" class="swiper-slide certificates__slide">
+                <img src="@img/picture/certificate.jpg" alt="certificate" class="certificates__img">
+              </a>
+              <a href="@img/picture/certificate.jpg" data-fancybox="certificates" class="swiper-slide certificates__slide">
+                <img src="@img/picture/certificate.jpg" alt="certificate" class="certificates__img">
+              </a>
+              <a href="@img/picture/certificate.jpg" data-fancybox="certificates" class="swiper-slide certificates__slide">
+                <img src="@img/picture/certificate.jpg" alt="certificate" class="certificates__img">
+              </a>
+            </div>
+          </div>
+          <div class="scrollbar certificates__scrollbar-wrapper">
+            <div class="scrollbar__item certificates__scrollbar"></div>
+          </div>
+        </div>
+      </section>
       @@include('html/components/reviews.html')
       <section class="section advantages">
         <div class="container">
@@ -117,7 +164,137 @@
         </div>
       </section>
       @@include('html/components/comfort.html')
-      @@include('html/components/our-doctors.html')
+      <section class="section our-doctors our-doctors--clean">
+        <div class="container">
+          <div class="our-doctors__head">
+            <h2 class="title title-2">Наши <span>врачи</span></h2>
+            <div class="slider-nav our-doctors__slider-nav">
+              <button class="btn slider-nav__btn slider-nav__btn--prev">
+                <svg class="slider-nav__arrow">
+                  <use xlink:href="img/icons/icons.svg#icon-arrow-clean"></use>
+                </svg>
+              </button>
+              <button class="btn slider-nav__btn slider-nav__btn--next">
+                <svg class="slider-nav__arrow">
+                  <use xlink:href="img/icons/icons.svg#icon-arrow-clean"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="swiper our-doctors__slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide doctor">
+                <div class="doctor__gallery">
+                  <img src="@img/picture/doctor.jpg" alt="doctor" class="doctor__img" />
+                  <div class="corner corner--min corner--right-top doctor__corner">
+                    <div class="corner__body">
+                      <span class="doctor__skill">Стаж 10 лет</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="doctor__info">
+                  <h5 class="title subtitle">Виктория Александровна Козырева</h5>
+                  <p class="doctor__content">Врач-стоматолог, ортодонт, детский терапевт</p>
+                  <a href="#" class="doctor__btn btn-custom btn-custom--stroke">Подробнее</a>
+                </div>
+              </div>
+              <div class="swiper-slide doctor">
+                <div class="doctor__gallery">
+                  <img src="@img/picture/doctor.jpg" alt="doctor" class="doctor__img" />
+                  <div class="corner corner--min corner--right-top doctor__corner">
+                    <div class="corner__body">
+                      <span class="doctor__skill">Стаж 10 лет</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="doctor__info">
+                  <h5 class="title subtitle">Виктория Александровна Козырева</h5>
+                  <p class="doctor__content">Врач-стоматолог, ортодонт, детский терапевт</p>
+                  <a href="#" class="doctor__btn btn-custom btn-custom--stroke">Подробнее</a>
+                </div>
+              </div>
+              <div class="swiper-slide doctor">
+                <div class="doctor__gallery">
+                  <img src="@img/picture/doctor.jpg" alt="doctor" class="doctor__img" />
+                  <div class="corner corner--min corner--right-top doctor__corner">
+                    <div class="corner__body">
+                      <span class="doctor__skill">Стаж 10 лет</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="doctor__info">
+                  <h5 class="title subtitle">Виктория Александровна Козырева</h5>
+                  <p class="doctor__content">Врач-стоматолог, ортодонт, детский терапевт</p>
+                  <a href="#" class="doctor__btn btn-custom btn-custom--stroke">Подробнее</a>
+                </div>
+              </div>
+              <div class="swiper-slide doctor">
+                <div class="doctor__gallery">
+                  <img src="@img/picture/doctor.jpg" alt="doctor" class="doctor__img" />
+                  <div class="corner corner--min corner--right-top doctor__corner">
+                    <div class="corner__body">
+                      <span class="doctor__skill">Стаж 10 лет</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="doctor__info">
+                  <h5 class="title subtitle">Виктория Александровна Козырева</h5>
+                  <p class="doctor__content">Врач-стоматолог, ортодонт, детский терапевт</p>
+                  <a href="#" class="doctor__btn btn-custom btn-custom--stroke">Подробнее</a>
+                </div>
+              </div>
+              <div class="swiper-slide doctor">
+                <div class="doctor__gallery">
+                  <img src="@img/picture/doctor.jpg" alt="doctor" class="doctor__img" />
+                  <div class="corner corner--min corner--right-top doctor__corner">
+                    <div class="corner__body">
+                      <span class="doctor__skill">Стаж 10 лет</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="doctor__info">
+                  <h5 class="title subtitle">Виктория Александровна Козырева</h5>
+                  <p class="doctor__content">Врач-стоматолог, ортодонт, детский терапевт</p>
+                  <a href="#" class="doctor__btn btn-custom btn-custom--stroke">Подробнее</a>
+                </div>
+              </div>
+              <div class="swiper-slide doctor">
+                <div class="doctor__gallery">
+                  <img src="@img/picture/doctor.jpg" alt="doctor" class="doctor__img" />
+                  <div class="corner corner--min corner--right-top doctor__corner">
+                    <div class="corner__body">
+                      <span class="doctor__skill">Стаж 10 лет</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="doctor__info">
+                  <h5 class="title subtitle">Виктория Александровна Козырева</h5>
+                  <p class="doctor__content">Врач-стоматолог, ортодонт, детский терапевт</p>
+                  <a href="#" class="doctor__btn btn-custom btn-custom--stroke">Подробнее</a>
+                </div>
+              </div>
+              <div class="swiper-slide doctor">
+                <div class="doctor__gallery">
+                  <img src="@img/picture/doctor.jpg" alt="doctor" class="doctor__img" />
+                  <div class="corner corner--min corner--right-top doctor__corner">
+                    <div class="corner__body">
+                      <span class="doctor__skill">Стаж 10 лет</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="doctor__info">
+                  <h5 class="title subtitle">Виктория Александровна Козырева</h5>
+                  <p class="doctor__content">Врач-стоматолог, ортодонт, детский терапевт</p>
+                  <a href="#" class="doctor__btn btn-custom btn-custom--stroke">Подробнее</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="scrollbar our-doctors__scrollbar-wrapper">
+            <div class="scrollbar__item our-doctors__scrollbar"></div>
+          </div>
+        </div>
+      </section>
       @@include('html/components/consultation.html')
     </main>
     @@include('html/components/footer.html')

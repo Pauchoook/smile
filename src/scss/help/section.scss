@@ -1,4 +1,10 @@
 .section {
   position: relative;
   z-index: 10;
+  &._clean-decor {
+    z-index: 10;
+    &::before {
+      display: none !important;
+    }
+  }
 }

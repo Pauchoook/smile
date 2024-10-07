@@ -2520,7 +2520,6 @@ body {
   border-radius: 40px;
   border: 1px solid var(--athens-gray);
   background-color: var(--alabaster);
-  color: var(--manatee);
   padding: 12px 20px;
   width: 100%;
   font-size: 16px;
@@ -2562,19 +2561,19 @@ body {
   border-color: var(--red)
 }
 .input::-webkit-input-placeholder {
-  color: inherit;
+  color: var(--manatee);
   font-size: inherit
 }
 .input:-ms-input-placeholder {
-  color: inherit;
+  color: var(--manatee);
   font-size: inherit
 }
 .input::-ms-input-placeholder {
-  color: inherit;
+  color: var(--manatee);
   font-size: inherit
 }
 .input::placeholder {
-  color: inherit;
+  color: var(--manatee);
   font-size: inherit
 }
 .input-disable {
@@ -3325,6 +3324,12 @@ body {
   position: relative;
   z-index: 10
 }
+.section._clean-decor {
+  z-index: 10
+}
+.section._clean-decor::before {
+  display: none!important
+}
 .doctor-name {
   display: inline-flex;
   align-items: center;
@@ -3441,7 +3446,8 @@ body {
   padding: 0!important
 }
 .wrapper-section .section:last-child {
-  padding-bottom: 0!important
+  padding-bottom: 0!important;
+  padding-top: 90px
 }
 .wrapper-section--bottom {
   padding-top: 0;
@@ -3932,6 +3938,9 @@ body {
   padding: 13px 15px;
   background-color: rgba(255,255,255,.9);
   border-radius: 20px
+}
+.header__body--border {
+  border: 1px solid var(--athens-gray)
 }
 .header__menu {
   display: flex;
@@ -4461,7 +4470,7 @@ body {
   z-index: 5
 }
 .our-doctors--clean {
-  padding-top: 0;
+  padding: 0;
   z-index: 10
 }
 .our-doctors--clean::before {
@@ -5373,7 +5382,9 @@ body {
   margin-bottom: 30px
 }
 .services-gallery__item-title {
-  margin-bottom: 16px
+  display: block;
+  margin-bottom: 16px;
+  transition: color .2s ease
 }
 .services-gallery__item-list {
   display: flex;
@@ -5985,6 +5996,9 @@ body {
 }
 .certificates {
   padding: 90px 0
+}
+.certificates--bottom-padding {
+  padding-top: 0
 }
 .certificates__head {
   display: flex;
@@ -8209,11 +8223,15 @@ body {
   .more[data-lines="2"] {
     -webkit-line-clamp: 3
   }
+  .wrapper-section .section:last-child {
+    padding-top: 40px
+  }
   .wrapper-section {
     padding: 40px 0;
     border-radius: 30px
   }
   .wrapper-section--bottom {
+    padding-top: 0;
     border-radius: 0 0 30px 30px
   }
   .doctor {
@@ -9196,6 +9214,9 @@ body {
   .certificates {
     padding: 40px 0
   }
+  .certificates--bottom-padding {
+    padding-top: 0
+  }
   .certificates__head {
     margin-bottom: 24px
   }
@@ -10081,6 +10102,9 @@ body {
   }
   .contacts__item-info a:hover {
     color: var(--orange)
+  }
+  .services-gallery__item-title:hover {
+    color: var(--melrose)
   }
   .services-gallery__item-list a:hover {
     color: var(--melrose)

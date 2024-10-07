@@ -18,7 +18,6 @@
   border-radius: 40px;
   border: 1px solid var(--athens-gray);
   background-color: var(--alabaster);
-  color: var(--manatee);
   padding: 12px 20px;
   width: 100%;
   font-size: 16px;
@@ -63,7 +62,7 @@
     border-color: var(--red);
   }
   &::placeholder {
-    color: inherit;
+    color: var(--manatee);
     font-size: inherit;
   }
 }

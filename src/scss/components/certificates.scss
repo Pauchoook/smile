@@ -1,10 +1,16 @@
 .certificates {
   padding: 90px 0px;
+  &--bottom-padding {
+    padding-top: 0;
+  }
   @include tablet {
     padding: 40px 0px;
+    &--bottom-padding {
+      padding-top: 0;
+    }
   }
   @include tablet-min {
-    overflow: hidden
+    overflow: hidden;
   }
   &__head {
     @include flex-between;
