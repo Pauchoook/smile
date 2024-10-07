@@ -1,0 +1,84 @@
+<section class="section linear" id="leave-review">
+	<div class="container linear__container">
+		<div class="linear__circle">
+			<div class="linear__circle-body">
+				<div class="linear__circle-wrapper">
+					<svg class="linear__circle-text" viewBox="0 0 100 100">
+						<path id="circle" d="M 0,50 a 50,50 0 1,1 0,1 z" />
+						<text>
+							<textPath xlink:href="#circle">* фабрика улыбок * фабрика улыбок</textPath>
+						</text>
+					</svg>
+					<div class="linear__circle-center">
+						<img src="img/tooth.svg" alt="tooth" class="consultation__circle-logo" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="linear__body linear__body--review">
+			<div class="linear__info linear__info--review">
+				<h2 class="title title-2 leave-review__title">Оставьте <span>свой отзыв</span> здесь</h2>
+				<form action="" class="leave-review__form">
+					<div class="star-rating leave-review__rating">
+						<input type="radio" id="st-5" name="star-rating" class="star-rating__input" value="star 5" />
+						<label for="st-5" class="star-rating__label">
+							<svg class="star-rating__icon">
+								<use xlink:href="img/icons/icons.svg#icon-star"></use>
+							</svg>
+						</label>
+						<input type="radio" id="st-4" name="star-rating" class="star-rating__input" value="star 4" />
+						<label for="st-4" class="star-rating__label">
+							<svg class="star-rating__icon">
+								<use xlink:href="img/icons/icons.svg#icon-star"></use>
+							</svg>
+						</label>
+						<input type="radio" id="st-3" name="star-rating" class="star-rating__input" value="star 3" />
+						<label for="st-3" class="star-rating__label">
+							<svg class="star-rating__icon">
+								<use xlink:href="img/icons/icons.svg#icon-star"></use>
+							</svg>
+						</label>
+						<input type="radio" id="st-2" name="star-rating" class="star-rating__input" value="star 2" />
+						<label for="st-2" class="star-rating__label">
+							<svg class="star-rating__icon">
+								<use xlink:href="img/icons/icons.svg#icon-star"></use>
+							</svg>
+						</label>
+						<input type="radio" id="st-1" name="star-rating" class="star-rating__input" value="star 1" />
+						<label for="st-1" class="star-rating__label">
+							<svg class="star-rating__icon">
+								<use xlink:href="img/icons/icons.svg#icon-star"></use>
+							</svg>
+						</label>
+					</div>
+					<label for="review-message" class="leave-review__labelleave-review__label leave-review__label--message">
+						<textarea name="review-message" id="review-message" placeholder="Ваш отзыв" class="input input--textarea"></textarea>
+					</label>
+					<label for="review-name" class="leave-review__label">
+						<input type="review-text" name="review-name" placeholder="Ваше имя" class="input" />
+					</label>
+					<label for="review-tel" class="leave-review__label">
+						<input type="tel" name="review-tel" placeholder="Ваш телефон" class="input" />
+					</label>
+					<label for="review-tel" class="leave-review__label leave-review__label--file">
+						<div class="input">
+							<span class="file-value">Прикрепить фото</span>
+						</div>
+						<svg class="leave-review__icon-file">
+							<use xlink:href="img/icons/icons.svg#icon-paperclip"></use>
+						</svg>
+						<input type="file" name="review-name" class="input-file" />
+					</label>
+					<button class="btn btn-custom btn-custom--primary leave-review__btn">
+						Отправить отзыв
+					</button>
+					<p class="policy-content">
+						Нажимая на кнопку «Отправить отзыв» я даю согласие на обработку
+						<a href="#">персональных данных</a>
+					</p>
+				</form>
+			</div>
+			<img src="img/picture/leave-review.jpg" alt="image" class="linear__img" />
+		</div>
+	</div>
+</section>
