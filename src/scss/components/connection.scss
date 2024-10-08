@@ -6,6 +6,22 @@
       padding-bottom: 40px;
     }
   }
+  &._mobile-decor {
+    @include tablet {
+      overflow: hidden;
+      &::before {
+        position: absolute;
+        content: "";
+        width: 1230px;
+        height: 300px;
+        transform: rotate(145deg);
+        top: 200px;
+        left: -405px;
+        background: url("@img/decor/decor.svg") 0 0 / 100% 100% no-repeat;
+        z-index: -1;
+      }
+    }
+  }
   &--app {
     padding: 0px 0px 90px 0px;
     border-radius: 0;

@@ -4,6 +4,13 @@
   padding: 90px 0px;
   border-radius: 60px;
   z-index: 10;
+  &--min {
+    .section {
+      &:last-child {
+        padding-top: 24px !important;
+      }
+    }
+  }
   .section {
     &:first-child {
       padding: 0 !important;

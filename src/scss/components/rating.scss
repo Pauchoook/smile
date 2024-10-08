@@ -48,6 +48,27 @@
       }
     }
   }
+  &--about {
+    @include tablet {
+      overflow: hidden;
+    }
+    &::before {
+      width: 2590px;
+      height: 630px;
+      transform: rotate(150deg) scale(-1, 1);
+      top: auto;
+      bottom: -270px;
+      right: 0;
+      @include tablet {
+        display: block;
+        width: 1230px;
+        height: 300px;
+        left: -470px;
+        bottom: 120px;
+        transform: rotate(145deg);
+      }
+    }
+  }
   &__title {
     margin-bottom: 50px;
     @include tablet {

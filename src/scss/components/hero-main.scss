@@ -21,16 +21,14 @@
     .hero-main__main {
       background-image: none;
     }
-    &::before {
-      display: none;
-    }
   }
   @include tablet {
     padding: 90px 0px 40px 0px;
     &::before {
       width: 1230px;
       height: 300px;
-      bottom: 80px;
+      // bottom: 80px;
+      bottom: 130px;
       left: -470px;
       transform: rotate(145deg);
     }

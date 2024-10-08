@@ -100,7 +100,10 @@
     position: absolute;
     display: block;
     overflow: visible;
-    inset: 22px;
+    top: 22px;
+    right: 22px;
+    bottom: 22px;
+    left: 22px;
     font-size: 18px;
     fill: var(--orange);
     animation: rotate 5s linear infinite;
@@ -108,7 +111,10 @@
       fill: none;
     }
     @include tablet-min {
-      inset: 13px;
+      top: 13px;
+      right: 13px;
+      bottom: 13px;
+      left: 13px;
     }
   }
   &__circle-center {
@@ -188,7 +194,7 @@
         height: 450px;
         filter: blur(4px);
         transform: scale(-1, 1);
-        left: -5px;
+        left: -80px;
       }
       &::after {
         width: 830px;

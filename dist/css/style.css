@@ -3442,6 +3442,9 @@ body {
   border-radius: 60px;
   z-index: 10
 }
+.wrapper-section--min .section:last-child {
+  padding-top: 24px!important
+}
 .wrapper-section .section:first-child {
   padding: 0!important
 }
@@ -3678,8 +3681,10 @@ body {
   background: url(../img/decor/decor.svg) 0 0/100% 100% no-repeat;
   width: 1145px;
   height: 270px;
-  top: -40px;
+  top: -60px;
   right: -75px;
+  -webkit-transform: rotate(3deg);
+  transform: rotate(3deg);
   z-index: -1
 }
 .head__more {
@@ -4805,6 +4810,15 @@ body {
   -webkit-transform: rotate(61deg);
   transform: rotate(61deg)
 }
+.rating--about::before {
+  width: 2590px;
+  height: 630px;
+  -webkit-transform: rotate(150deg) scale(-1,1);
+  transform: rotate(150deg) scale(-1,1);
+  top: auto;
+  bottom: -270px;
+  right: 0
+}
 .rating__title {
   margin-bottom: 50px
 }
@@ -5115,9 +5129,6 @@ body {
 }
 .hero-main--price .hero-main__main {
   background-image: none
-}
-.hero-main--price::before {
-  display: none
 }
 .hero-main .breadcrumbs {
   flex: 1
@@ -6301,7 +6312,10 @@ body {
   position: absolute;
   display: block;
   overflow: visible;
-  inset: 22px;
+  top: 22px;
+  right: 22px;
+  bottom: 22px;
+  left: 22px;
   font-size: 18px;
   fill: var(--orange);
   -webkit-animation: rotate 5s linear infinite;
@@ -6723,6 +6737,7 @@ body {
   padding-top: 90px
 }
 .contacts-main__body {
+  position: relative;
   display: flex;
   gap: 24px
 }
@@ -8291,7 +8306,7 @@ body {
   }
   .head {
     min-height: auto;
-    padding-bottom: 40px
+    padding-bottom: 60px
   }
   .head__title {
     margin-top: 16px
@@ -8310,7 +8325,9 @@ body {
     width: 620px;
     height: 245px;
     right: -300px;
-    top: -5px
+    top: -5px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
   }
   .head__more {
     margin: 12px 0
@@ -8467,6 +8484,21 @@ body {
   }
   .connection._bottom {
     padding-bottom: 40px
+  }
+  .connection._mobile-decor {
+    overflow: hidden
+  }
+  .connection._mobile-decor::before {
+    position: absolute;
+    content: "";
+    width: 1230px;
+    height: 300px;
+    -webkit-transform: rotate(145deg);
+    transform: rotate(145deg);
+    top: 200px;
+    left: -405px;
+    background: url(../img/decor/decor.svg) 0 0/100% 100% no-repeat;
+    z-index: -1
   }
   .connection--app .connection__content {
     max-width: 210px
@@ -8681,6 +8713,18 @@ body {
     right: -270px;
     display: block
   }
+  .rating--about {
+    overflow: hidden
+  }
+  .rating--about::before {
+    display: block;
+    width: 1230px;
+    height: 300px;
+    left: -470px;
+    bottom: 120px;
+    -webkit-transform: rotate(145deg);
+    transform: rotate(145deg)
+  }
   .rating__title {
     margin-bottom: 24px
   }
@@ -8809,7 +8853,7 @@ body {
   .hero-main::before {
     width: 1230px;
     height: 300px;
-    bottom: 80px;
+    bottom: 130px;
     left: -470px;
     -webkit-transform: rotate(145deg);
     transform: rotate(145deg)
@@ -9458,9 +9502,6 @@ body {
   .tax__policy {
     margin-top: 16px
   }
-  .contacts-main {
-    padding-top: 40px
-  }
   .contacts-main__info {
     flex-basis: 100%;
     border-radius: 20px;
@@ -9764,7 +9805,10 @@ body {
     height: 76px
   }
   .linear__circle-text {
-    inset: 13px
+    top: 13px;
+    right: 13px;
+    bottom: 13px;
+    left: 13px
   }
   .linear__circle-center {
     width: 36px;
@@ -9784,7 +9828,7 @@ body {
     filter: blur(4px);
     -webkit-transform: scale(-1,1);
     transform: scale(-1,1);
-    left: -5px
+    left: -80px
   }
   .linear__body::after {
     width: 830px;
@@ -9847,6 +9891,9 @@ body {
   .modal__close {
     top: 10px;
     right: 16px
+  }
+  .modal-connect__title {
+    max-width: 300px
   }
   .services__container {
     gap: 16px
