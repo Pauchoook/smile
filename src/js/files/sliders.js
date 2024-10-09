@@ -61,7 +61,7 @@ export default function sliders() {
     const sldierInfo = new Swiper(portfolioInfoSlider, {
       modules: [Navigation, Scrollbar, Pagination, EffectFade, Autoplay],
       speed: 700,
-      allowTouchMove: false,
+      // allowTouchMove: false,
       effect: "fade",
       fadeEffect: { crossFade: true },
       navigation: {

@@ -8,6 +8,18 @@
       display: none;
     }
   }
+  &--clean-top {
+    padding-top: 0;
+    &::before {
+      display: none;
+    }
+  }
+  &--clean-bottom {
+    padding-bottom: 0;
+    &::before {
+      display: none;
+    }
+  }
   &::before {
     position: absolute;
     content: "";
@@ -26,10 +38,11 @@
       padding: 0;
     }
     &::before {
-      width: 1065px;
-      height: 175px;
-      transform: rotate(135deg);
-      bottom: -405px;
+      width: 1230px;
+      height: 300px;
+      transform: rotate(-123deg) scale(-1, 1);
+      bottom: 65px;
+      right: -150px;
     }
   }
   &__head {

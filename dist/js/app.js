@@ -6122,7 +6122,6 @@
                 new Swiper(portfolioInfoSlider, {
                     modules: [ Navigation, Scrollbar, Pagination, EffectFade, Autoplay ],
                     speed: 700,
-                    allowTouchMove: false,
                     effect: "fade",
                     fadeEffect: {
                         crossFade: true
@@ -6286,6 +6285,7 @@
             const socialHeader = document.querySelector(".header__social");
             const navHeader = document.querySelector(".header__nav");
             const navWrapperFirst = burger.querySelector(".burger__wrapper");
+            const burgerOverlayHtml = `\n  <div class="burger__overlay">\n      <div class="burger__overlay-wrapper"></div>\n    </div>\n  `;
             if (burger) {
                 burgerBtn.addEventListener("click", (e => {
                     e.stopPropagation();
@@ -6297,7 +6297,12 @@
                         navHeader.classList.add("show");
                         navWrapperFirst.classList.add("open");
                         document.body.classList.add("body-hidden");
-                        document.body.addEventListener("click", handleClose);
+                        document.body.insertAdjacentHTML("beforeEnd", burgerOverlayHtml);
+                        const burgerOverlay = document.querySelector(".burger__overlay");
+                        setTimeout((() => {
+                            burgerOverlay.classList.add("open");
+                        }), 100);
+                        burgerOverlay.addEventListener("click", handleClose);
                     } else handleClose();
                 }));
                 function handleClose() {
@@ -6307,8 +6312,10 @@
                     navHeader.classList.remove("show");
                     navWrapperFirst.classList.remove("open");
                     document.body.classList.remove("body-hidden");
+                    const burgerOverlay = document.querySelector(".burger__overlay");
+                    burgerOverlay.remove();
                     document.querySelectorAll(".nav-menu").forEach((menu => menu.classList.remove("open")));
-                    return document.body.removeEventListener("click", handleClose);
+                    return burgerOverlay.removeEventListener("click", handleClose);
                 }
             }
             const buttonsNav = document.querySelectorAll(".btn-nav");

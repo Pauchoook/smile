@@ -4,6 +4,13 @@ export default function burger() {
   const socialHeader = document.querySelector(".header__social");
   const navHeader = document.querySelector(".header__nav");
   const navWrapperFirst = burger.querySelector(".burger__wrapper");
+
+  const burgerOverlayHtml = `
+  <div class="burger__overlay">
+      <div class="burger__overlay-wrapper"></div>
+    </div>
+  `
+
   if (burger) {
     burgerBtn.addEventListener("click", (e) => {
       e.stopPropagation();
@@ -16,8 +23,14 @@ export default function burger() {
         navHeader.classList.add("show");
         navWrapperFirst.classList.add("open");
         document.body.classList.add("body-hidden");
+        document.body.insertAdjacentHTML("beforeEnd", burgerOverlayHtml)
 
-        document.body.addEventListener("click", handleClose);
+        const burgerOverlay = document.querySelector(".burger__overlay");
+        setTimeout(() => {
+          burgerOverlay.classList.add("open");
+        }, 100)
+
+        burgerOverlay.addEventListener("click", handleClose);
       } else {
         handleClose();
       }
@@ -30,9 +43,12 @@ export default function burger() {
       navHeader.classList.remove("show");
       navWrapperFirst.classList.remove("open");
       document.body.classList.remove("body-hidden");
+
+      const burgerOverlay = document.querySelector(".burger__overlay");
+      burgerOverlay.remove();
       document.querySelectorAll(".nav-menu").forEach(menu => menu.classList.remove("open"));
 
-      return document.body.removeEventListener("click", handleClose);
+      return burgerOverlay.removeEventListener("click", handleClose);
     }
   }
 
