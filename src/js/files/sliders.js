@@ -18,9 +18,9 @@ export default function sliders() {
         prevEl: ".our-doctors .slider-nav__btn--prev",
         nextEl: ".our-doctors .slider-nav__btn--next",
       },
-      autoplay: {
-        delay: 4000,
-      },
+      // autoplay: {
+      //   delay: 4000,
+      // },
       scrollbar: {
         el: ".our-doctors__scrollbar",
         draggable: true,
@@ -79,9 +79,9 @@ export default function sliders() {
         el: ".portfolio__scrollbar",
         draggable: true,
       },
-      autoplay: {
-        delay: 3000,
-      },
+      // autoplay: {
+      //   delay: 3000,
+      // },
       on: {
         init: () => {
           const firstBtnPagination = document.querySelector(".portfolio__nav .pagination__btn");
@@ -126,9 +126,9 @@ export default function sliders() {
         el: ".reviews__scrollbar",
         draggable: true,
       },
-      autoplay: {
-        delay: 3000,
-      },
+      // autoplay: {
+      //   delay: 3000,
+      // },
       on: {
         init: () => {
           const firstBtnPagination = document.querySelector(".reviews__nav .pagination__btn");

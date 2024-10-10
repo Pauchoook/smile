@@ -2805,7 +2805,6 @@ body {
   transform: translateY(-40px);
   opacity: 0;
   visibility: hidden;
-  max-height: calc(100vh - 105px);
   padding-bottom: 80px;
   overflow-y: auto;
   z-index: -1;
@@ -3886,7 +3885,7 @@ body {
   position: fixed;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
   right: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -5170,24 +5169,34 @@ body {
 .hero-main::before {
   position: absolute;
   content: "";
-  bottom: 130px;
-  left: -300px;
-  width: 2240px;
-  height: 540px;
+  bottom: 15px;
+  right: -450px;
+  width: 2410px;
+  height: 600px;
+  -webkit-transform: rotate(-3deg);
+  transform: rotate(-3deg);
   background: url(../img/decor/decor.svg) 0 0/contain no-repeat;
   z-index: -1
 }
 .hero-main--doctor .hero-main__main {
   background-image: none
 }
+.hero-main--price .hero-main__container {
+  align-items: stretch
+}
 .hero-main--price .hero-main__main {
-  background-image: none
+  background-image: none;
+  align-self: start
+}
+.hero-main--price .hero-main__middle-img {
+  height: 280px
 }
 .hero-main .breadcrumbs {
   flex: 1
 }
 .hero-main__container {
   display: flex;
+  align-items: start;
   gap: 30px
 }
 .hero-main__main {
@@ -5294,7 +5303,7 @@ body {
 .hero-main__middle-img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 260px;
   -o-object-fit: cover;
   object-fit: cover;
   border-radius: 20px;
@@ -7565,6 +7574,9 @@ body {
   .hero-main__main {
     flex: 0 1 100%
   }
+  .hero-main__middle-img {
+    height: auto
+  }
   .services-gallery__item {
     flex-basis: calc(50% - 12px)
   }
@@ -8925,7 +8937,7 @@ body {
     width: 1230px;
     height: 300px;
     bottom: 130px;
-    left: -470px;
+    right: -470px;
     -webkit-transform: rotate(145deg);
     transform: rotate(145deg)
   }

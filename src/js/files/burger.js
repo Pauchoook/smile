@@ -9,7 +9,7 @@ export default function burger() {
   <div class="burger__overlay">
       <div class="burger__overlay-wrapper"></div>
     </div>
-  `
+  `;
 
   if (burger) {
     burgerBtn.addEventListener("click", (e) => {
@@ -23,12 +23,12 @@ export default function burger() {
         navHeader.classList.add("show");
         navWrapperFirst.classList.add("open");
         document.body.classList.add("body-hidden");
-        document.body.insertAdjacentHTML("beforeEnd", burgerOverlayHtml)
+        document.body.insertAdjacentHTML("beforeEnd", burgerOverlayHtml);
 
         const burgerOverlay = document.querySelector(".burger__overlay");
         setTimeout(() => {
           burgerOverlay.classList.add("open");
-        }, 100)
+        }, 100);
 
         burgerOverlay.addEventListener("click", handleClose);
       } else {
@@ -46,10 +46,22 @@ export default function burger() {
 
       const burgerOverlay = document.querySelector(".burger__overlay");
       burgerOverlay.remove();
-      document.querySelectorAll(".nav-menu").forEach(menu => menu.classList.remove("open"));
+      document.querySelectorAll(".nav-menu").forEach((menu) => menu.classList.remove("open"));
 
       return burgerOverlay.removeEventListener("click", handleClose);
     }
+
+    function updateHeightBurger() {
+      const heightHeader = document.querySelector(".header").clientHeight;
+      const height = window.visualViewport.height - heightHeader;
+
+      burger.style.height = `${height}px`;
+    }
+
+    window.visualViewport.addEventListener("resize", updateHeightBurger);
+    window.visualViewport.addEventListener("scroll", updateHeightBurger);
+
+    updateHeightBurger();
   }
 
   const buttonsNav = document.querySelectorAll(".btn-nav");

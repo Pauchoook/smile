@@ -6083,9 +6083,6 @@
                         prevEl: ".our-doctors .slider-nav__btn--prev",
                         nextEl: ".our-doctors .slider-nav__btn--next"
                     },
-                    autoplay: {
-                        delay: 4e3
-                    },
                     scrollbar: {
                         el: ".our-doctors__scrollbar",
                         draggable: true
@@ -6141,9 +6138,6 @@
                         el: ".portfolio__scrollbar",
                         draggable: true
                     },
-                    autoplay: {
-                        delay: 3e3
-                    },
                     on: {
                         init: () => {
                             const firstBtnPagination = document.querySelector(".portfolio__nav .pagination__btn");
@@ -6186,9 +6180,6 @@
                     scrollbar: {
                         el: ".reviews__scrollbar",
                         draggable: true
-                    },
-                    autoplay: {
-                        delay: 3e3
                     },
                     on: {
                         init: () => {
@@ -6317,6 +6308,14 @@
                     document.querySelectorAll(".nav-menu").forEach((menu => menu.classList.remove("open")));
                     return burgerOverlay.removeEventListener("click", handleClose);
                 }
+                function updateHeightBurger() {
+                    const heightHeader = document.querySelector(".header").clientHeight;
+                    const height = window.visualViewport.height - heightHeader;
+                    burger.style.height = `${height}px`;
+                }
+                window.visualViewport.addEventListener("resize", updateHeightBurger);
+                window.visualViewport.addEventListener("scroll", updateHeightBurger);
+                updateHeightBurger();
             }
             const buttonsNav = document.querySelectorAll(".btn-nav");
             if (buttonsNav.length) buttonsNav.forEach((btn => {
