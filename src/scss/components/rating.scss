@@ -9,19 +9,25 @@
   &::before {
     position: absolute;
     content: "";
-    width: 2230px;
-    height: 540px;
-    top: 150px;
-    right: 50px;
-    transform: rotate(-22deg);
+    width: 2552px;
+    height: 725px;
+    bottom: -626px;
+    right: -249px;
+    transform: rotate(-21deg);
     background: url("@img/decor/decor.svg") 0 0 / 100% 100% no-repeat;
     z-index: -1;
+    @media (max-width: 1600px) {
+      width: 2230px;
+      height: 600px;
+      bottom: -426px;
+      right: -187px;
+    }
+    @include tablet {
+      display: none;
+    }
   }
   @include tablet {
     padding: 40px 0px;
-    &::before {
-      display: none;
-    }
   }
   &--rotate {
     z-index: 5;

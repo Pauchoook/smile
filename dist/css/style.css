@@ -3858,6 +3858,11 @@ body {
   color: #fff;
   box-shadow: 0 2px 4px 0 rgba(46,38,61,.16)
 }
+.wrapper-hidden {
+  position: relative;
+  overflow: hidden;
+  z-index: 10
+}
 .modal-connect--call .modal-connect__title {
   text-align: left
 }
@@ -4841,12 +4846,12 @@ body {
 .rating::before {
   position: absolute;
   content: "";
-  width: 2230px;
-  height: 540px;
-  top: 150px;
-  right: 50px;
-  -webkit-transform: rotate(-22deg);
-  transform: rotate(-22deg);
+  width: 2552px;
+  height: 725px;
+  bottom: -626px;
+  right: -249px;
+  -webkit-transform: rotate(-21deg);
+  transform: rotate(-21deg);
   background: url(../img/decor/decor.svg) 0 0/100% 100% no-repeat;
   z-index: -1
 }
@@ -4932,10 +4937,10 @@ body {
   width: 2605px;
   height: 740px;
   background: url(../img/decor/decor.svg) 0 0/100% 100% no-repeat;
-  right: 0;
-  bottom: -50px;
-  -webkit-transform: rotate(144deg) scale(1,-1);
-  transform: rotate(144deg) scale(1,-1)
+  right: -400px;
+  top: -443px;
+  -webkit-transform: rotate(140deg) scale(1,-1);
+  transform: rotate(140deg) scale(1,-1)
 }
 .reviews__body {
   position: relative;
@@ -5169,10 +5174,10 @@ body {
 .hero-main::before {
   position: absolute;
   content: "";
-  bottom: 15px;
-  right: -450px;
-  width: 2410px;
-  height: 600px;
+  bottom: -8px;
+  right: -302px;
+  width: 2606px;
+  height: 689px;
   -webkit-transform: rotate(-3deg);
   transform: rotate(-3deg);
   background: url(../img/decor/decor.svg) 0 0/contain no-repeat;
@@ -5497,8 +5502,7 @@ body {
   display: none
 }
 .about-service {
-  padding: 90px 0 60px 0;
-  z-index: 5
+  padding: 90px 0 60px 0
 }
 .about-service--decor::before {
   position: absolute;
@@ -7406,6 +7410,20 @@ body {
 .swiper-fade .swiper-slide-active .swiper-slide-active {
   pointer-events: auto
 }
+@media (max-width:1600px) {
+  .rating::before {
+    width: 2230px;
+    height: 600px;
+    bottom: -426px;
+    right: -187px
+  }
+  .hero-main::before {
+    bottom: 15px;
+    right: -450px;
+    width: 2410px;
+    height: 600px
+  }
+}
 @media (max-width:1439px) {
   .hero__decor {
     top: -100px
@@ -8781,11 +8799,11 @@ body {
   .advantages__video-btn {
     margin-top: 16px
   }
-  .rating {
-    padding: 40px 0
-  }
   .rating::before {
     display: none
+  }
+  .rating {
+    padding: 40px 0
   }
   .rating--rotate::before {
     width: 1230px;
@@ -8930,9 +8948,6 @@ body {
     height: 250px;
     border-radius: 20px
   }
-  .hero-main {
-    padding: 90px 0 40px 0
-  }
   .hero-main::before {
     width: 1230px;
     height: 300px;
@@ -8940,6 +8955,9 @@ body {
     right: -470px;
     -webkit-transform: rotate(145deg);
     transform: rotate(145deg)
+  }
+  .hero-main {
+    padding: 90px 0 40px 0
   }
   .hero-main__container {
     gap: 16px

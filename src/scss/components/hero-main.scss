@@ -5,13 +5,26 @@
   &::before {
     position: absolute;
     content: "";
-    bottom: 15px;
-    right: -450px;
-    width: 2410px;
-    height: 600px;
+    bottom: -8px;
+    right: -302px;
+    width: 2606px;
+    height: 689px;
     transform: rotate(-3deg);
     background: url("@img/decor/decor.svg") 0 0 / contain no-repeat;
     z-index: -1;
+    @media (max-width: 1600px) {
+      bottom: 15px;
+      right: -450px;
+      width: 2410px;
+      height: 600px;
+    }
+    @include tablet {
+      width: 1230px;
+      height: 300px;
+      bottom: 130px;
+      right: -470px;
+      transform: rotate(145deg);
+    }
   }
   &--doctor {
     .hero-main__main {
@@ -32,13 +45,6 @@
   }
   @include tablet {
     padding: 90px 0px 40px 0px;
-    &::before {
-      width: 1230px;
-      height: 300px;
-      bottom: 130px;
-      right: -470px;
-      transform: rotate(145deg);
-    }
   }
   .breadcrumbs {
     flex: 1;
